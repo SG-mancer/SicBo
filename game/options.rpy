@@ -12,7 +12,7 @@
 ##
 ## The _() surrounding the string marks it as eligible for translation.
 
-define config.name = _("SicBo")
+define config.name = _("Sic-Bo")
 
 
 ## Determines if the title given above is shown on the main menu screen. Set
@@ -30,6 +30,9 @@ define config.version = "1.0"
 ## triple-quotes, and leave a blank line between paragraphs.
 
 define gui.about = _p("""
+{i}A casino game, of gambling on the oucome of 3 dice.
+
+By {b}Shane George{/b} (https://github.com/SG-mancer) {b}(c) 2022 {/b}{/i}
 """)
 
 
@@ -46,9 +49,9 @@ define build.name = "SicBo"
 ## to the player by default. Setting one of these to False will hide the
 ## appropriate mixer.
 
-define config.has_sound = True
-define config.has_music = True
-define config.has_voice = True
+define config.has_sound = False
+define config.has_music = False
+define config.has_voice = False
 
 
 ## To allow the user to play a test sound on the sound or voice channel,

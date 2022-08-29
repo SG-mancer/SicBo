@@ -36,8 +36,8 @@ label placeBets:
     while chips >= 0:
         show text "## SIC BO ##\n[chips] Chips remaining" at top
         python:
-            ui.textbutton ("SMALL\n4-10\n(1)", clicked=SetVariable('betSmall',(betSmall+1)), xalign=0.1, yalign=0.1)
-            ui.textbutton ("BIG\n11-17\n(1)", clicked=SetVariable('betBig',(betSmall+1)), xalign=0.9, yalign=0.1)
+            ui.textbutton ("SMALL\n4-10\n(1)", clicked=Call('betSmall'), xalign=0.1, yalign=0.1)
+            ui.textbutton ("BIG\n11-17\n(1)", clicked=Call('betBig'), xalign=0.9, yalign=0.1)
 
             # Triples
             ui.textbutton ("ANY TRIPPLE", clicked=Call('betTripA'), xalign=0.5, yalign=0.1)
@@ -142,7 +142,7 @@ label calcBets:
     
     "The winning numbers are [Dicex] - [Dicey] - [Dicez]"
     call cashBets
-    # TODO: Add a display of winning bets on the table
+    call showBets
     "You have won [cash]"
     $ chips += cash
     $ cash = 0
@@ -11988,4 +11988,119 @@ label betDice5:
 label betDice6:
     $ betDice[5] += 1
     $ chips -= 1
+    return
+
+label showBets:
+    python:
+        if betBig>0:
+            ui.text("SMALL\n4-10\n(1)", xalign=0.1, yalign=0.1)
+        if betSmall>0:
+            ui.text("BIG\n11-17\n(1)", xalign=0.9, yalign=0.1)
+
+        # Triples
+        if betTrips[0]>0:
+            ui.text("ANY TRIPPLE", xalign=0.5, yalign=0.1)
+        if betTrips[1]>0:
+            ui.text("⚀⚀⚀", xalign=0.5, yalign=0.125)
+        if betTrips[2]>0:
+            ui.text("⚁⚁⚁", xalign=0.5, yalign=0.15)
+        if betTrips[3]>0:
+            ui.text("⚂⚂⚂", xalign=0.5, yalign=0.175)
+        if betTrips[4]>0:
+            ui.text("⚃⚃⚃", xalign=0.5, yalign=0.2)
+        if betTrips[5]>0:
+            ui.text("⚄⚄⚄", xalign=0.5, yalign=0.225)
+        if betTrips[6]>0:
+            ui.text("⚅⚅⚅", xalign=0.5, yalign=0.25)
+
+        # Doubles
+        if betDoubs[0]>0:
+            ui.text("⚀\n⚀", xalign=0.2, yalign=0.15)
+        if betDoubs[1]>0:
+            ui.text("⚁\n⚁", xalign=0.3, yalign=0.15)
+        if betDoubs[2]>0:
+            ui.text("⚂\n⚂", xalign=0.4, yalign=0.15)
+        if betDoubs[3]>0:
+            ui.text("⚃\n⚃", xalign=0.6, yalign=0.15)
+        if betDoubs[4]>0:
+            ui.text("⚄\n⚄", xalign=0.7, yalign=0.15)
+        if betDoubs[5]>0:
+            ui.text("⚅\n⚅", xalign=0.8, yalign=0.15)
+
+        # Numbers
+        if betNums[0]>0:
+            ui.text("4\n(62)", xalign=0.15, yalign=0.3)
+        if betNums[1]>0:
+            ui.text("5\n(31)", xalign=0.2, yalign=0.3)
+        if betNums[2]>0:
+            ui.text("6\n(18)", xalign=0.25, yalign=0.3)
+        if betNums[3]>0:
+            ui.text("7\n(12)", xalign=0.3, yalign=0.3)
+        if betNums[4]>0:
+            ui.text("8\n(8)", xalign=0.35, yalign=0.3)
+        if betNums[5]>0:
+            ui.text("9\n(7)", xalign=0.4, yalign=0.3)
+        if betNums[6]>0:
+            ui.text("10\n(6)", xalign=0.45, yalign=0.3)
+        if betNums[7]>0:
+            ui.text("11\n(6)", xalign=0.55, yalign=0.3)
+        if betNums[8]>0:
+            ui.text("12\n(7)", xalign=0.6, yalign=0.3)
+        if betNums[9]>0:
+            ui.text("13\n(8)", xalign=0.65, yalign=0.3)
+        if betNums[10]>0:
+            ui.text("14\n(12)", xalign=0.7, yalign=0.3)
+        if betNums[11]>0:
+            ui.text("15\n(18)", xalign=0.75, yalign=0.3)
+        if betNums[12]>0:
+            ui.text("16\n(31)", xalign=0.8, yalign=0.3)
+        if betNums[13]>0:
+            ui.text("17\n(62)", xalign=0.85, yalign=0.3)
+
+        # Pairs
+        if betPairs[0]>0:
+            ui.text("⚀\n⚁", xalign=0.15, yalign=0.45)
+        if betPairs[1]>0:
+            ui.text("⚀\n⚂", xalign=0.2, yalign=0.45)
+        if betPairs[2]>0:
+            ui.text("⚀\n⚃", xalign=0.25, yalign=0.45)
+        if betPairs[3]>0:
+            ui.text("⚀\n⚄", xalign=0.3, yalign=0.45)
+        if betPairs[4]>0:
+            ui.text("⚀\n⚅", xalign=0.35, yalign=0.45)
+        if betPairs[5]>0:
+            ui.text("⚁\n⚂", xalign=0.4, yalign=0.45)
+        if betPairs[6]>0:
+            ui.text("⚁\n⚃", xalign=0.45, yalign=0.45)
+        if betPairs[7]>0:
+            ui.text("⚁\n⚄", xalign=0.5, yalign=0.45)
+        if betPairs[8]>0:
+            ui.text("⚁\n⚅", xalign=0.55, yalign=0.45)
+        if betPairs[9]>0:
+            ui.text("⚂\n⚃", xalign=0.6, yalign=0.45)
+        if betPairs[10]>0:
+            ui.text("⚂\n⚄", xalign=0.65, yalign=0.45)
+        if betPairs[11]>0:
+            ui.text("⚂\n⚅", xalign=0.7, yalign=0.45)
+        if betPairs[12]>0:
+            ui.text("⚃\n⚄", xalign=0.75, yalign=0.45)
+        if betPairs[13]>0:
+            ui.text("⚃\n⚅", xalign=0.8, yalign=0.45)
+        if betPairs[14]>0:
+            ui.text("⚄\n⚅", xalign=0.85, yalign=0.45)
+
+        # Dice
+        if betDice[0]>0:
+            ui.text("One ⚀", xalign=0.25, yalign=0.6)
+        if betDice[1]>0:
+            ui.text("Two ⚁", xalign=0.35, yalign=0.6)
+        if betDice[2]>0:
+            ui.text("Three ⚂", xalign=0.45, yalign=0.6)
+        if betDice[3]>0:
+            ui.text("Four ⚃", xalign=0.55, yalign=0.6)
+        if betDice[4]>0:
+            ui.text("Five ⚄", xalign=0.65, yalign=0.6)
+        if betDice[5]>0:
+            ui.text("Six ⚅", xalign=0.75, yalign=0.6)
+    
     return
