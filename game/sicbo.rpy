@@ -165,21 +165,21 @@ label cashBets:
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ betPairs[7] = 0 #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ cash += (betDice[0]*12)
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
@@ -1094,7 +1094,7 @@ label cashBets:
         elif Dicey == 'Four ⚃':
             ""
             if Dicez == 'One ⚀':
-                # 1,1,4
+                # 1,1,4_
                 ""
                 $ cash += betSmall# Chips on Small
                 $ betBig = 0 # Chips on Big
@@ -1125,9 +1125,9 @@ label cashBets:
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ cash += (betPairs[0]*6)
+                $ cash += (betPairs[2]*6)
                 $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
+                $ betPairs[0] = 0 #6
                 $ betPairs[3] = 0 #6
                 $ betPairs[4] = 0 #6
                 $ betPairs[5] = 0 #6
@@ -1253,9 +1253,9 @@ label cashBets:
                 $ betDice[4] = 0 #1,2,12
                 $ betDice[5] = 0 #1,2,12
             elif Dicez == 'Four ⚃':
-                # 1,4,4
+                # 1,4,4_
                 ""
-                $ betSmall = 0 # Chips on Small
+                $ cash += betSmall# Chips on Small
                 $ betBig = 0 # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
@@ -1267,7 +1267,7 @@ label cashBets:
                 $ betDoubs[0] = 0 #11
                 $ betDoubs[1] = 0 #11
                 $ betDoubs[2] = 0 #!1
-                $ betDoubs[3] = 0 #11
+                $ cash += (betDoubs[3]*11)
                 $ betDoubs[4] = 0 #11
                 $ betDoubs[5] = 0 #11
                 $ betNums[0] = 0 #62
@@ -1275,7 +1275,7 @@ label cashBets:
                 $ betNums[2] = 0 #18
                 $ betNums[3] = 0 #12
                 $ betNums[4] = 0 #8
-                $ betNums[5] = 0 #7
+                $ cash += (betNums[5]*7)
                 $ betNums[6] = 0 #6
                 $ betNums[7] = 0 #6
                 $ betNums[8] = 0 #7
@@ -1286,7 +1286,7 @@ label cashBets:
                 $ betNums[13] = 0 #62
                 $ betPairs[0] = 0 #6
                 $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
+                $ cash += (betPairs[2]*6)
                 $ betPairs[3] = 0 #6
                 $ betPairs[4] = 0 #6
                 $ betPairs[5] = 0 #6
@@ -1299,16 +1299,16 @@ label cashBets:
                 $ betPairs[12] = 0 #6
                 $ betPairs[13] = 0 #6
                 $ betPairs[14] = 0 #6
-                $ betDice[0] = 0 #1,2,12
+                $ cash += betDice[0]
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
-                $ betDice[3] = 0 #1,2,12
+                $ cash += (betDice[3]*2)
                 $ betDice[4] = 0 #1,2,12
                 $ betDice[5] = 0 #1,2,12
             elif Dicez == 'Five ⚄':
-                # 1,4,5
+                # 1,4,5__
                 ""
-                $ betSmall = 0 # Chips on Small
+                $ cash += betSmall # Chips on Small
                 $ betBig = 0 # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
@@ -1329,7 +1329,7 @@ label cashBets:
                 $ betNums[3] = 0 #12
                 $ betNums[4] = 0 #8
                 $ betNums[5] = 0 #7
-                $ betNums[6] = 0 #6
+                $ cash += (betNums[6]*6)
                 $ betNums[7] = 0 #6
                 $ betNums[8] = 0 #7
                 $ betNums[9] = 0 #8
@@ -1339,8 +1339,8 @@ label cashBets:
                 $ betNums[13] = 0 #62
                 $ betPairs[0] = 0 #6
                 $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
+                $ cash += (betPairs[2]*6)
+                $ cash += (betPairs[3]*6)
                 $ betPairs[4] = 0 #6
                 $ betPairs[5] = 0 #6
                 $ betPairs[6] = 0 #6
@@ -1349,20 +1349,20 @@ label cashBets:
                 $ betPairs[9] = 0 #6
                 $ betPairs[10] = 0 #6
                 $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
+                $ cash += (betPairs[12]*6)
                 $ betPairs[13] = 0 #6
                 $ betPairs[14] = 0 #6
-                $ betDice[0] = 0 #1,2,12
+                $ cash += betDice[0]
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
-                $ betDice[3] = 0 #1,2,12
-                $ betDice[4] = 0 #1,2,12
+                $ cash += betDice[3]
+                $ cash += betDice[4]
                 $ betDice[5] = 0 #1,2,12
             else: #'Six ⚅'
-                # 1,4,6
+                # 1,4,6__
                 ""
                 $ betSmall = 0 # Chips on Small
-                $ betBig = 0 # Chips on Big
+                $ cash += betBig # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
                 $ betTrips[2] = 0 #180
@@ -1383,7 +1383,7 @@ label cashBets:
                 $ betNums[4] = 0 #8
                 $ betNums[5] = 0 #7
                 $ betNums[6] = 0 #6
-                $ betNums[7] = 0 #6
+                $ cash += (betNums[7]*6)
                 $ betNums[8] = 0 #7
                 $ betNums[9] = 0 #8
                 $ betNums[10] = 0 #12
@@ -1392,9 +1392,9 @@ label cashBets:
                 $ betNums[13] = 0 #62
                 $ betPairs[0] = 0 #6
                 $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
+                $ cash += (betPairs[2]*6)
                 $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
+                $ cash += (betPairs[4]*6)
                 $ betPairs[5] = 0 #6
                 $ betPairs[6] = 0 #6
                 $ betPairs[7] = 0 #6
@@ -1403,18 +1403,18 @@ label cashBets:
                 $ betPairs[10] = 0 #6
                 $ betPairs[11] = 0 #6
                 $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
+                $ cash += (betPairs[13]*6)
                 $ betPairs[14] = 0 #6
-                $ betDice[0] = 0 #1,2,12
+                $ cash += betDice[0] #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
-                $ betDice[3] = 0 #1,2,12
+                $ cash += betDice[3] #1,2,12
                 $ betDice[4] = 0 #1,2,12
-                $ betDice[5] = 0 #1,2,12
+                $ cash += betDice[5] #1,2,12
         elif Dicey == 'Five ⚄':
             ""
             if Dicez == 'One ⚀':
-                # 1,1,5
+                # 1,1,5__
                 ""
                 $ cash += betSmall
                 $ betBig = 0 # Chips on Big
@@ -1460,11 +1460,11 @@ label cashBets:
                 $ betPairs[12] = 0 #6
                 $ betPairs[13] = 0 #6
                 $ betPairs[14] = 0 #6
-                $ betDice[0] = 0 #1,2,12
+                $ cash += (betDice[0]*2) #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
                 $ betDice[3] = 0 #1,2,12
-                $ betDice[4] = 0 #1,2,12
+                $ cash += betDice[4] #1,2,12
                 $ betDice[5] = 0 #1,2,12
             elif Dicez == 'Two ⚁':
                 # 1,2,5_
@@ -1573,9 +1573,9 @@ label cashBets:
                 $ cash += betDice[4]
                 $ betDice[5] = 0 #1,2,12
             elif Dicez == 'Four ⚃':
-                # 1,4,5
+                # 1,4,5__
                 ""
-                $ betSmall = 0 # Chips on Small
+                $ cash += betSmall # Chips on Small
                 $ betBig = 0 # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
@@ -1596,7 +1596,7 @@ label cashBets:
                 $ betNums[3] = 0 #12
                 $ betNums[4] = 0 #8
                 $ betNums[5] = 0 #7
-                $ betNums[6] = 0 #6
+                $ cash += (betNums[6]*6)
                 $ betNums[7] = 0 #6
                 $ betNums[8] = 0 #7
                 $ betNums[9] = 0 #8
@@ -1606,8 +1606,8 @@ label cashBets:
                 $ betNums[13] = 0 #62
                 $ betPairs[0] = 0 #6
                 $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
+                $ cash += (betPairs[2]*6)
+                $ cash += (betPairs[3]*6)
                 $ betPairs[4] = 0 #6
                 $ betPairs[5] = 0 #6
                 $ betPairs[6] = 0 #6
@@ -1616,20 +1616,20 @@ label cashBets:
                 $ betPairs[9] = 0 #6
                 $ betPairs[10] = 0 #6
                 $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
+                $ cash += (betPairs[12]*6)
                 $ betPairs[13] = 0 #6
                 $ betPairs[14] = 0 #6
-                $ betDice[0] = 0 #1,2,12
+                $ cash += betDice[0]
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
-                $ betDice[3] = 0 #1,2,12
-                $ betDice[4] = 0 #1,2,12
+                $ cash += betDice[3]
+                $ cash += betDice[4]
                 $ betDice[5] = 0 #1,2,12
             elif Dicez == 'Five ⚄':
-                # 1,5,5
+                # 1,5,5_
                 ""
                 $ betSmall = 0 # Chips on Small
-                $ betBig = 0 # Chips on Big
+                $ cash += betBig # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
                 $ betTrips[2] = 0 #180
@@ -1641,7 +1641,7 @@ label cashBets:
                 $ betDoubs[1] = 0 #11
                 $ betDoubs[2] = 0 #!1
                 $ betDoubs[3] = 0 #11
-                $ betDoubs[4] = 0 #11
+                $ cash += (betDoubs[4]*11)
                 $ betDoubs[5] = 0 #11
                 $ betNums[0] = 0 #62
                 $ betNums[1] = 0 #31
@@ -1650,7 +1650,7 @@ label cashBets:
                 $ betNums[4] = 0 #8
                 $ betNums[5] = 0 #7
                 $ betNums[6] = 0 #6
-                $ betNums[7] = 0 #6
+                $ cash += (betNums[7]*6)
                 $ betNums[8] = 0 #7
                 $ betNums[9] = 0 #8
                 $ betNums[10] = 0 #12
@@ -1660,7 +1660,7 @@ label cashBets:
                 $ betPairs[0] = 0 #6
                 $ betPairs[1] = 0 #6
                 $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
+                $ cash += (betPairs[3]*6)
                 $ betPairs[4] = 0 #6
                 $ betPairs[5] = 0 #6
                 $ betPairs[6] = 0 #6
@@ -1672,17 +1672,17 @@ label cashBets:
                 $ betPairs[12] = 0 #6
                 $ betPairs[13] = 0 #6
                 $ betPairs[14] = 0 #6
-                $ betDice[0] = 0 #1,2,12
+                $ cash += betDice[0] #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
                 $ betDice[3] = 0 #1,2,12
-                $ betDice[4] = 0 #1,2,12
+                $ cash += (betDice[4]*2) #1,2,12
                 $ betDice[5] = 0 #1,2,12
             else: #'Six ⚅'
-                # 1,5,6
+                # 1,5,6__
                 ""
                 $ betSmall = 0 # Chips on Small
-                $ betBig = 0 # Chips on Big
+                $ cash += betBig # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
                 $ betTrips[2] = 0 #180
@@ -1704,7 +1704,7 @@ label cashBets:
                 $ betNums[5] = 0 #7
                 $ betNums[6] = 0 #6
                 $ betNums[7] = 0 #6
-                $ betNums[8] = 0 #7
+                $ cash += (betNums[8]*7)
                 $ betNums[9] = 0 #8
                 $ betNums[10] = 0 #12
                 $ betNums[11] = 0 #18
@@ -1713,8 +1713,8 @@ label cashBets:
                 $ betPairs[0] = 0 #6
                 $ betPairs[1] = 0 #6
                 $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
+                $ cash += (betPairs[3]*6)
+                $ cash += (betPairs[4]*6)
                 $ betPairs[5] = 0 #6
                 $ betPairs[6] = 0 #6
                 $ betPairs[7] = 0 #6
@@ -1724,17 +1724,17 @@ label cashBets:
                 $ betPairs[11] = 0 #6
                 $ betPairs[12] = 0 #6
                 $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
-                $ betDice[0] = 0 #1,2,12
+                $ cash += (betPairs[14]*6)
+                $ cash += betDice[0]
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
                 $ betDice[3] = 0 #1,2,12
-                $ betDice[4] = 0 #1,2,12
-                $ betDice[5] = 0 #1,2,12
+                $ cash += betDice[4]
+                $ cash += betDice[5]
         else: #'Six ⚅'
             ""
             if Dicez == 'One ⚀':
-                # 1,1,6
+                # 1,1,6__
                 ""
                 $ cash += betSmall
                 $ betBig = 0 # Chips on Big
@@ -1780,12 +1780,12 @@ label cashBets:
                 $ betPairs[12] = 0 #6
                 $ betPairs[13] = 0 #6
                 $ betPairs[14] = 0 #6
-                $ betDice[0] = 0 #1,2,12
+                $ cash += (betDice[0]*2) #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
                 $ betDice[3] = 0 #1,2,12
                 $ betDice[4] = 0 #1,2,12
-                $ betDice[5] = 0 #1,2,12
+                $ cash += betDice[5] #1,2,12
             elif Dicez == 'Two ⚁':
                 # 1,2,6_
                 ""
@@ -1840,9 +1840,9 @@ label cashBets:
                 $ betDice[4] = 0 #1,2,12
                 $ cash += betDice[5]
             elif Dicez == 'Three ⚂':
-                # 1,3,6 
+                # 1,3,6__
                 ""
-                $ betSmall = 0 # Chips on Small
+                $ cash += betSmall # Chips on Small
                 $ betBig = 0 # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
@@ -1863,7 +1863,7 @@ label cashBets:
                 $ betNums[3] = 0 #12
                 $ betNums[4] = 0 #8
                 $ betNums[5] = 0 #7
-                $ betNums[6] = 0 #6
+                $ cash += (betNums[6]*6)
                 $ betNums[7] = 0 #6
                 $ betNums[8] = 0 #7
                 $ betNums[9] = 0 #8
@@ -1872,31 +1872,31 @@ label cashBets:
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
                 $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
+                $ cash += (betPairs[1]*6)
                 $ betPairs[2] = 0 #6
                 $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
+                $ cash += (betPairs[4]*6)
                 $ betPairs[5] = 0 #6
                 $ betPairs[6] = 0 #6
                 $ betPairs[7] = 0 #6
                 $ betPairs[8] = 0 #6
                 $ betPairs[9] = 0 #6
                 $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
+                $ cash += (betPairs[11]*6)
                 $ betPairs[12] = 0 #6
                 $ betPairs[13] = 0 #6
                 $ betPairs[14] = 0 #6
-                $ betDice[0] = 0 #1,2,12
+                $ cash += betDice[0]
                 $ betDice[1] = 0 #1,2,12
-                $ betDice[2] = 0 #1,2,12
+                $ cash += betDice[2]
                 $ betDice[3] = 0 #1,2,12
                 $ betDice[4] = 0 #1,2,12
-                $ betDice[5] = 0 #1,2,12
+                $ cash += betDice[5]
             elif Dicez == 'Four ⚃':
-                # 1,4,6
+                # 1,4,6__
                 ""
                 $ betSmall = 0 # Chips on Small
-                $ betBig = 0 # Chips on Big
+                $ cash += betBig # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
                 $ betTrips[2] = 0 #180
@@ -1917,7 +1917,7 @@ label cashBets:
                 $ betNums[4] = 0 #8
                 $ betNums[5] = 0 #7
                 $ betNums[6] = 0 #6
-                $ betNums[7] = 0 #6
+                $ cash += (betNums[7]*6)
                 $ betNums[8] = 0 #7
                 $ betNums[9] = 0 #8
                 $ betNums[10] = 0 #12
@@ -1926,9 +1926,9 @@ label cashBets:
                 $ betNums[13] = 0 #62
                 $ betPairs[0] = 0 #6
                 $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
+                $ cash += (betPairs[2]*6)
                 $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
+                $ cash += (betPairs[4]*6)
                 $ betPairs[5] = 0 #6
                 $ betPairs[6] = 0 #6
                 $ betPairs[7] = 0 #6
@@ -1937,19 +1937,19 @@ label cashBets:
                 $ betPairs[10] = 0 #6
                 $ betPairs[11] = 0 #6
                 $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
+                $ cash += (betPairs[13]*6)
                 $ betPairs[14] = 0 #6
-                $ betDice[0] = 0 #1,2,12
+                $ cash += betDice[0] #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
-                $ betDice[3] = 0 #1,2,12
+                $ cash += betDice[3] #1,2,12
                 $ betDice[4] = 0 #1,2,12
-                $ betDice[5] = 0 #1,2,12
+                $ cash += betDice[5] #1,2,12
             elif Dicez == 'Five ⚄':
-                # 1,5,6
+                # 1,5,6__
                 ""
                 $ betSmall = 0 # Chips on Small
-                $ betBig = 0 # Chips on Big
+                $ cash += betBig # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
                 $ betTrips[2] = 0 #180
@@ -1971,7 +1971,7 @@ label cashBets:
                 $ betNums[5] = 0 #7
                 $ betNums[6] = 0 #6
                 $ betNums[7] = 0 #6
-                $ betNums[8] = 0 #7
+                $ cash += (betNums[8]*7)
                 $ betNums[9] = 0 #8
                 $ betNums[10] = 0 #12
                 $ betNums[11] = 0 #18
@@ -1980,8 +1980,8 @@ label cashBets:
                 $ betPairs[0] = 0 #6
                 $ betPairs[1] = 0 #6
                 $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
+                $ cash += (betPairs[3]*6)
+                $ cash += (betPairs[4]*6)
                 $ betPairs[5] = 0 #6
                 $ betPairs[6] = 0 #6
                 $ betPairs[7] = 0 #6
@@ -1991,18 +1991,18 @@ label cashBets:
                 $ betPairs[11] = 0 #6
                 $ betPairs[12] = 0 #6
                 $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
-                $ betDice[0] = 0 #1,2,12
+                $ cash += (betPairs[14]*6)
+                $ cash += betDice[0]
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
                 $ betDice[3] = 0 #1,2,12
-                $ betDice[4] = 0 #1,2,12
-                $ betDice[5] = 0 #1,2,12
+                $ cash += betDice[4]
+                $ cash += betDice[5]
             else: #'Six ⚅'
-                # 1,6,6
+                # 1,6,6__
                 ""
                 $ betSmall = 0 # Chips on Small
-                $ betBig = 0 # Chips on Big
+                $ cash += betBig # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
                 $ betTrips[2] = 0 #180
@@ -2015,7 +2015,7 @@ label cashBets:
                 $ betDoubs[2] = 0 #!1
                 $ betDoubs[3] = 0 #11
                 $ betDoubs[4] = 0 #11
-                $ betDoubs[5] = 0 #11
+                $ cash += (betDoubs[5]*11)
                 $ betNums[0] = 0 #62
                 $ betNums[1] = 0 #31
                 $ betNums[2] = 0 #18
@@ -2025,7 +2025,7 @@ label cashBets:
                 $ betNums[6] = 0 #6
                 $ betNums[7] = 0 #6
                 $ betNums[8] = 0 #7
-                $ betNums[9] = 0 #8
+                $ cash += (betNums[9]*8)
                 $ betNums[10] = 0 #12
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
@@ -2034,7 +2034,7 @@ label cashBets:
                 $ betPairs[1] = 0 #6
                 $ betPairs[2] = 0 #6
                 $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
+                $ cash += (betPairs[4]*6)
                 $ betPairs[5] = 0 #6
                 $ betPairs[6] = 0 #6
                 $ betPairs[7] = 0 #6
@@ -2045,12 +2045,12 @@ label cashBets:
                 $ betPairs[12] = 0 #6
                 $ betPairs[13] = 0 #6
                 $ betPairs[14] = 0 #6
-                $ betDice[0] = 0 #1,2,12
+                $ cash += betDice[0] #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
                 $ betDice[3] = 0 #1,2,12
                 $ betDice[4] = 0 #1,2,12
-                $ betDice[5] = 0 #1,2,12
+                $ cash += (betDice[5]*2) #1,2,12
     elif Dicex == 'Two ⚁':
         ""
         if Dicey == 'One ⚀':
@@ -2376,9 +2376,9 @@ label cashBets:
         elif Dicey == 'Two ⚁':
             ""
             if Dicez == 'One ⚀':
-                # 2,2,1
+                # 1,2,2_
                 ""
-                $ betSmall = 0 # Chips on Small
+                $ cash += betSmall # Chips on Small
                 $ betBig = 0 # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
@@ -2388,13 +2388,13 @@ label cashBets:
                 $ betTrips[5] = 0 #180
                 $ betTrips[6] = 0 #180
                 $ betDoubs[0] = 0 #11
-                $ betDoubs[1] = 0 #11
+                $ cash += (betDoubs[1]*11)
                 $ betDoubs[2] = 0 #!1
                 $ betDoubs[3] = 0 #11
                 $ betDoubs[4] = 0 #11
                 $ betDoubs[5] = 0 #11
                 $ betNums[0] = 0 #62
-                $ betNums[1] = 0 #31
+                $ cash += (betNums[1]*31)
                 $ betNums[2] = 0 #18
                 $ betNums[3] = 0 #12
                 $ betNums[4] = 0 #8
@@ -2407,7 +2407,7 @@ label cashBets:
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
+                $ cash += (betPairs[0]*6)
                 $ betPairs[1] = 0 #6
                 $ betPairs[2] = 0 #6
                 $ betPairs[3] = 0 #6
@@ -2422,33 +2422,33 @@ label cashBets:
                 $ betPairs[12] = 0 #6
                 $ betPairs[13] = 0 #6
                 $ betPairs[14] = 0 #6
-                $ betDice[0] = 0 #1,2,12
-                $ betDice[1] = 0 #1,2,12
+                $ cash += (betDice[0]) #1,2,12
+                $ cash += (betDice[1]*2)
                 $ betDice[2] = 0 #1,2,12
                 $ betDice[3] = 0 #1,2,12
                 $ betDice[4] = 0 #1,2,12
                 $ betDice[5] = 0 #1,2,12
             elif Dicez == 'Two ⚁':
-                # 2,2,2
+                # 2,2,2_
                 ""
-                $ betSmall = 0 # Chips on Small
+                $ cash += betSmall # Chips on Small
                 $ betBig = 0 # Chips on Big
-                $ betTrips[0] = 0 #31
+                $ cash += (betTrips[0]*31)
                 $ betTrips[1] = 0 #180
-                $ betTrips[2] = 0 #180
+                $ cash += (betTrips[2]*180)
                 $ betTrips[3] = 0 #180
                 $ betTrips[4] = 0 #180
                 $ betTrips[5] = 0 #180
                 $ betTrips[6] = 0 #180
                 $ betDoubs[0] = 0 #11
-                $ betDoubs[1] = 0 #11
+                $ cash += (betDoubs[1]*11)
                 $ betDoubs[2] = 0 #!1
                 $ betDoubs[3] = 0 #11
                 $ betDoubs[4] = 0 #11
                 $ betDoubs[5] = 0 #11
                 $ betNums[0] = 0 #62
                 $ betNums[1] = 0 #31
-                $ betNums[2] = 0 #18
+                $ cash += (betNums[2]*18)
                 $ betNums[3] = 0 #12
                 $ betNums[4] = 0 #8
                 $ betNums[5] = 0 #7
@@ -2460,31 +2460,31 @@ label cashBets:
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ betPairs[7] = 0 #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
-                $ betDice[1] = 0 #1,2,12
+                $ cash += (betDice[1]*12)
                 $ betDice[2] = 0 #1,2,12
                 $ betDice[3] = 0 #1,2,12
                 $ betDice[4] = 0 #1,2,12
                 $ betDice[5] = 0 #1,2,12
             elif Dicez == 'Three ⚂': 
-                # 2,2,3
+                # 2,2,3_
                 ""
-                $ betSmall = 0 # Chips on Small
+                $ cash += betSmall # Chips on Small
                 $ betBig = 0 # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
@@ -2494,7 +2494,7 @@ label cashBets:
                 $ betTrips[5] = 0 #180
                 $ betTrips[6] = 0 #180
                 $ betDoubs[0] = 0 #11
-                $ betDoubs[1] = 0 #11
+                $ cash += (betDoubs[1]*11)
                 $ betDoubs[2] = 0 #!1
                 $ betDoubs[3] = 0 #11
                 $ betDoubs[4] = 0 #11
@@ -2502,7 +2502,7 @@ label cashBets:
                 $ betNums[0] = 0 #62
                 $ betNums[1] = 0 #31
                 $ betNums[2] = 0 #18
-                $ betNums[3] = 0 #12
+                $ cash += (betNums[3]*12)
                 $ betNums[4] = 0 #8
                 $ betNums[5] = 0 #7
                 $ betNums[6] = 0 #6
@@ -2518,7 +2518,7 @@ label cashBets:
                 $ betPairs[2] = 0 #6
                 $ betPairs[3] = 0 #6
                 $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
+                $ cash += (betPairs[5]*6)
                 $ betPairs[6] = 0 #6
                 $ betPairs[7] = 0 #6
                 $ betPairs[8] = 0 #6
@@ -2529,15 +2529,15 @@ label cashBets:
                 $ betPairs[13] = 0 #6
                 $ betPairs[14] = 0 #6
                 $ betDice[0] = 0 #1,2,12
-                $ betDice[1] = 0 #1,2,12
-                $ betDice[2] = 0 #1,2,12
+                $ cash += (betDice[1]*2) #1,2,12
+                $ cash += betDice[2] #1,2,12
                 $ betDice[3] = 0 #1,2,12
                 $ betDice[4] = 0 #1,2,12
                 $ betDice[5] = 0 #1,2,12
             elif Dicez == 'Four ⚃':
-                # 2,2,4
+                # 2,2,4__
                 ""
-                $ betSmall = 0 # Chips on Small
+                $ cash += betSmall # Chips on Small
                 $ betBig = 0 # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
@@ -2547,7 +2547,7 @@ label cashBets:
                 $ betTrips[5] = 0 #180
                 $ betTrips[6] = 0 #180
                 $ betDoubs[0] = 0 #11
-                $ betDoubs[1] = 0 #11
+                $ cash += (betDoubs[1]*11)
                 $ betDoubs[2] = 0 #!1
                 $ betDoubs[3] = 0 #11
                 $ betDoubs[4] = 0 #11
@@ -2556,7 +2556,7 @@ label cashBets:
                 $ betNums[1] = 0 #31
                 $ betNums[2] = 0 #18
                 $ betNums[3] = 0 #12
-                $ betNums[4] = 0 #8
+                $ cash += (betNums[4]*8)
                 $ betNums[5] = 0 #7
                 $ betNums[6] = 0 #6
                 $ betNums[7] = 0 #6
@@ -2572,7 +2572,7 @@ label cashBets:
                 $ betPairs[3] = 0 #6
                 $ betPairs[4] = 0 #6
                 $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
+                $ cash += (betPairs[6]*6)
                 $ betPairs[7] = 0 #6
                 $ betPairs[8] = 0 #6
                 $ betPairs[9] = 0 #6
@@ -2582,15 +2582,15 @@ label cashBets:
                 $ betPairs[13] = 0 #6
                 $ betPairs[14] = 0 #6
                 $ betDice[0] = 0 #1,2,12
-                $ betDice[1] = 0 #1,2,12
+                $ cash += (betDice[1]*2) #1,2,12
                 $ betDice[2] = 0 #1,2,12
-                $ betDice[3] = 0 #1,2,12
+                $ cash += betDice[3] #1,2,12
                 $ betDice[4] = 0 #1,2,12
                 $ betDice[5] = 0 #1,2,12
             elif Dicez == 'Five ⚄':
-                # 2,2,5
+                # 2,2,5_
                 ""
-                $ betSmall = 0 # Chips on Small
+                $ cash += betSmall # Chips on Small
                 $ betBig = 0 # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
@@ -2600,7 +2600,7 @@ label cashBets:
                 $ betTrips[5] = 0 #180
                 $ betTrips[6] = 0 #180
                 $ betDoubs[0] = 0 #11
-                $ betDoubs[1] = 0 #11
+                $ cash += (betDoubs[1]*11)
                 $ betDoubs[2] = 0 #!1
                 $ betDoubs[3] = 0 #11
                 $ betDoubs[4] = 0 #11
@@ -2610,7 +2610,7 @@ label cashBets:
                 $ betNums[2] = 0 #18
                 $ betNums[3] = 0 #12
                 $ betNums[4] = 0 #8
-                $ betNums[5] = 0 #7
+                $ cash += (betNums[5]*7)
                 $ betNums[6] = 0 #6
                 $ betNums[7] = 0 #6
                 $ betNums[8] = 0 #7
@@ -2626,7 +2626,7 @@ label cashBets:
                 $ betPairs[4] = 0 #6
                 $ betPairs[5] = 0 #6
                 $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
+                $ cash += (betPairs[7]*6)
                 $ betPairs[8] = 0 #6
                 $ betPairs[9] = 0 #6
                 $ betPairs[10] = 0 #6
@@ -2635,15 +2635,15 @@ label cashBets:
                 $ betPairs[13] = 0 #6
                 $ betPairs[14] = 0 #6
                 $ betDice[0] = 0 #1,2,12
-                $ betDice[1] = 0 #1,2,12
+                $ cash += (betDice[1]*2) #1,2,12
                 $ betDice[2] = 0 #1,2,12
                 $ betDice[3] = 0 #1,2,12
-                $ betDice[4] = 0 #1,2,12
+                $ cash += betDice[4] #1,2,12
                 $ betDice[5] = 0 #1,2,12
             else: #'Six ⚅'
-                # 2,2,6
+                # 2,2,6_
                 ""
-                $ betSmall = 0 # Chips on Small
+                $ cash += betSmall # Chips on Small
                 $ betBig = 0 # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
@@ -2653,7 +2653,7 @@ label cashBets:
                 $ betTrips[5] = 0 #180
                 $ betTrips[6] = 0 #180
                 $ betDoubs[0] = 0 #11
-                $ betDoubs[1] = 0 #11
+                $ cash += (betDoubs[1]*11)
                 $ betDoubs[2] = 0 #!1
                 $ betDoubs[3] = 0 #11
                 $ betDoubs[4] = 0 #11
@@ -2664,7 +2664,7 @@ label cashBets:
                 $ betNums[3] = 0 #12
                 $ betNums[4] = 0 #8
                 $ betNums[5] = 0 #7
-                $ betNums[6] = 0 #6
+                $ cash += (betNums[6]*6)
                 $ betNums[7] = 0 #6
                 $ betNums[8] = 0 #7
                 $ betNums[9] = 0 #8
@@ -2680,7 +2680,7 @@ label cashBets:
                 $ betPairs[5] = 0 #6
                 $ betPairs[6] = 0 #6
                 $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
+                $ cash += (betPairs[8]*6)
                 $ betPairs[9] = 0 #6
                 $ betPairs[10] = 0 #6
                 $ betPairs[11] = 0 #6
@@ -2688,11 +2688,11 @@ label cashBets:
                 $ betPairs[13] = 0 #6
                 $ betPairs[14] = 0 #6
                 $ betDice[0] = 0 #1,2,12
-                $ betDice[1] = 0 #1,2,12
+                $ cash += betDice[1]*2) #1,2,12
                 $ betDice[2] = 0 #1,2,12
                 $ betDice[3] = 0 #1,2,12
                 $ betDice[4] = 0 #1,2,12
-                $ betDice[5] = 0 #1,2,12
+                $ cash += betDice[5] #1,2,12
         elif Dicey == 'Three ⚂': 
             ""
             if Dicez == 'One ⚀':
@@ -2749,9 +2749,9 @@ label cashBets:
                 $ betDice[4] = 0 #1,2,12
                 $ betDice[5] = 0 #1,2,12
             elif Dicez == 'Two ⚁':
-                # 2,2,3
+                # 2,2,3_
                 ""
-                $ betSmall = 0 # Chips on Small
+                $ cash += betSmall # Chips on Small
                 $ betBig = 0 # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
@@ -2761,7 +2761,7 @@ label cashBets:
                 $ betTrips[5] = 0 #180
                 $ betTrips[6] = 0 #180
                 $ betDoubs[0] = 0 #11
-                $ betDoubs[1] = 0 #11
+                $ cash += (betDoubs[1]*11)
                 $ betDoubs[2] = 0 #!1
                 $ betDoubs[3] = 0 #11
                 $ betDoubs[4] = 0 #11
@@ -2769,7 +2769,7 @@ label cashBets:
                 $ betNums[0] = 0 #62
                 $ betNums[1] = 0 #31
                 $ betNums[2] = 0 #18
-                $ betNums[3] = 0 #12
+                $ cash += (betNums[3]*12)
                 $ betNums[4] = 0 #8
                 $ betNums[5] = 0 #7
                 $ betNums[6] = 0 #6
@@ -2785,7 +2785,7 @@ label cashBets:
                 $ betPairs[2] = 0 #6
                 $ betPairs[3] = 0 #6
                 $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
+                $ cash += (betPairs[5]*6)
                 $ betPairs[6] = 0 #6
                 $ betPairs[7] = 0 #6
                 $ betPairs[8] = 0 #6
@@ -2796,15 +2796,15 @@ label cashBets:
                 $ betPairs[13] = 0 #6
                 $ betPairs[14] = 0 #6
                 $ betDice[0] = 0 #1,2,12
-                $ betDice[1] = 0 #1,2,12
-                $ betDice[2] = 0 #1,2,12
+                $ cash += (betDice[1]*2) #1,2,12
+                $ cash += betDice[2] #1,2,12
                 $ betDice[3] = 0 #1,2,12
                 $ betDice[4] = 0 #1,2,12
                 $ betDice[5] = 0 #1,2,12
             elif Dicez == 'Three ⚂': 
-                # 2,3,3
+                # 2,3,3_
                 ""
-                $ betSmall = 0 # Chips on Small
+                $ cash += betSmall # Chips on Small
                 $ betBig = 0 # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
@@ -2815,7 +2815,7 @@ label cashBets:
                 $ betTrips[6] = 0 #180
                 $ betDoubs[0] = 0 #11
                 $ betDoubs[1] = 0 #11
-                $ betDoubs[2] = 0 #!1
+                $ cash += (betDoubs[2]*11) #!1
                 $ betDoubs[3] = 0 #11
                 $ betDoubs[4] = 0 #11
                 $ betDoubs[5] = 0 #11
@@ -2823,7 +2823,7 @@ label cashBets:
                 $ betNums[1] = 0 #31
                 $ betNums[2] = 0 #18
                 $ betNums[3] = 0 #12
-                $ betNums[4] = 0 #8
+                $ cash += (betNums[4]*8)
                 $ betNums[5] = 0 #7
                 $ betNums[6] = 0 #6
                 $ betNums[7] = 0 #6
@@ -2838,7 +2838,7 @@ label cashBets:
                 $ betPairs[2] = 0 #6
                 $ betPairs[3] = 0 #6
                 $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
+                $ cash += (betPairs[5]*6)
                 $ betPairs[6] = 0 #6
                 $ betPairs[7] = 0 #6
                 $ betPairs[8] = 0 #6
@@ -2849,15 +2849,15 @@ label cashBets:
                 $ betPairs[13] = 0 #6
                 $ betPairs[14] = 0 #6
                 $ betDice[0] = 0 #1,2,12
-                $ betDice[1] = 0 #1,2,12
-                $ betDice[2] = 0 #1,2,12
+                $ cash += betDice[1] #1,2,12
+                $ cash += (betDice[2]*2) #1,2,12
                 $ betDice[3] = 0 #1,2,12
                 $ betDice[4] = 0 #1,2,12
                 $ betDice[5] = 0 #1,2,12
             elif Dicez == 'Four ⚃':
-                # 2,3,4
+                # 2,3,4__
                 ""
-                $ betSmall = 0 # Chips on Small
+                $ cash += betSmall # Chips on Small
                 $ betBig = 0 # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
@@ -2877,7 +2877,7 @@ label cashBets:
                 $ betNums[2] = 0 #18
                 $ betNums[3] = 0 #12
                 $ betNums[4] = 0 #8
-                $ betNums[5] = 0 #7
+                $ cash (betNums[5]*7)
                 $ betNums[6] = 0 #6
                 $ betNums[7] = 0 #6
                 $ betNums[8] = 0 #7
@@ -2891,26 +2891,26 @@ label cashBets:
                 $ betPairs[2] = 0 #6
                 $ betPairs[3] = 0 #6
                 $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
+                $ cash += (betPairs[5]*6)
+                $ cash += (betPairs[6]*6)
                 $ betPairs[7] = 0 #6
                 $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
+                $ cash += (betPairs[9]*6)
                 $ betPairs[10] = 0 #6
                 $ betPairs[11] = 0 #6
                 $ betPairs[12] = 0 #6
                 $ betPairs[13] = 0 #6
                 $ betPairs[14] = 0 #6
                 $ betDice[0] = 0 #1,2,12
-                $ betDice[1] = 0 #1,2,12
-                $ betDice[2] = 0 #1,2,12
-                $ betDice[3] = 0 #1,2,12
+                $ cash += betDice[1] #1,2,12
+                $ cash += betDice[2] #1,2,12
+                $ cash += betDice[3] #1,2,12
                 $ betDice[4] = 0 #1,2,12
                 $ betDice[5] = 0 #1,2,12
             elif Dicez == 'Five ⚄':
-                # 2,3,5
+                # 2,3,5_
                 ""
-                $ betSmall = 0 # Chips on Small
+                $ cash += betSmall # Chips on Small
                 $ betBig = 0 # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
@@ -2931,7 +2931,7 @@ label cashBets:
                 $ betNums[3] = 0 #12
                 $ betNums[4] = 0 #8
                 $ betNums[5] = 0 #7
-                $ betNums[6] = 0 #6
+                $ cash += (betNums[6]*6)
                 $ betNums[7] = 0 #6
                 $ betNums[8] = 0 #7
                 $ betNums[9] = 0 #8
@@ -2944,27 +2944,27 @@ label cashBets:
                 $ betPairs[2] = 0 #6
                 $ betPairs[3] = 0 #6
                 $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
+                $ cash += (betPairs[5]*6
                 $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
+                $ cash += (betPairs[7]*6
                 $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
+                $ cash += (betPairs[9]*6)
                 $ betPairs[10] = 0 #6
                 $ betPairs[11] = 0 #6
                 $ betPairs[12] = 0 #6
                 $ betPairs[13] = 0 #6
                 $ betPairs[14] = 0 #6
                 $ betDice[0] = 0 #1,2,12
-                $ betDice[1] = 0 #1,2,12
-                $ betDice[2] = 0 #1,2,12
+                $ cash += betDice[1] #1,2,12
+                $ cash += betDice[2] #1,2,12
                 $ betDice[3] = 0 #1,2,12
-                $ betDice[4] = 0 #1,2,12
+                $ cash += betDice[4] #1,2,12
                 $ betDice[5] = 0 #1,2,12
             else: #'Six ⚅'
-                # 2,3,6
+                # 2,3,6_
                 ""
                 $ betSmall = 0 # Chips on Small
-                $ betBig = 0 # Chips on Big
+                $ cash += betBig # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
                 $ betTrips[2] = 0 #180
@@ -2985,34 +2985,34 @@ label cashBets:
                 $ betNums[4] = 0 #8
                 $ betNums[5] = 0 #7
                 $ betNums[6] = 0 #6
-                $ betNums[7] = 0 #6
+                $ cash += (betNums[7]*6)
                 $ betNums[8] = 0 #7
                 $ betNums[9] = 0 #8
                 $ betNums[10] = 0 #12
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ cash += (betPairs[5]*2) #6 23
+                $ betPairs[6] = 0 #6 24
+                $ betPairs[7] = 0 #6 25
+                $ cash += (betPairs[8]*2) #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ cash += (betPairs[11]*2) #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
-                $ betDice[1] = 0 #1,2,12
-                $ betDice[2] = 0 #1,2,12
+                $ cash += betDice[1] #1,2,12
+                $ cash += betDice[2] #1,2,12
                 $ betDice[3] = 0 #1,2,12
                 $ betDice[4] = 0 #1,2,12
-                $ betDice[5] = 0 #1,2,12
+                $ cash += betDice[5] #1,2,12
         elif Dicey == 'Four ⚃':
             ""
             if Dicez == 'One ⚀':
@@ -3069,9 +3069,9 @@ label cashBets:
                 $ betDice[4] = 0 #1,2,12
                 $ betDice[5] = 0 #1,2,12
             elif Dicez == 'Two ⚁':
-                # 2,2,4
+                # 2,2,4__
                 ""
-                $ betSmall = 0 # Chips on Small
+                $ cash += betSmall # Chips on Small
                 $ betBig = 0 # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
@@ -3081,7 +3081,7 @@ label cashBets:
                 $ betTrips[5] = 0 #180
                 $ betTrips[6] = 0 #180
                 $ betDoubs[0] = 0 #11
-                $ betDoubs[1] = 0 #11
+                $ cash += (betDoubs[1]*11)
                 $ betDoubs[2] = 0 #!1
                 $ betDoubs[3] = 0 #11
                 $ betDoubs[4] = 0 #11
@@ -3090,7 +3090,7 @@ label cashBets:
                 $ betNums[1] = 0 #31
                 $ betNums[2] = 0 #18
                 $ betNums[3] = 0 #12
-                $ betNums[4] = 0 #8
+                $ cash += (betNums[4]*8)
                 $ betNums[5] = 0 #7
                 $ betNums[6] = 0 #6
                 $ betNums[7] = 0 #6
@@ -3106,7 +3106,7 @@ label cashBets:
                 $ betPairs[3] = 0 #6
                 $ betPairs[4] = 0 #6
                 $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
+                $ cash += (betPairs[6]*6)
                 $ betPairs[7] = 0 #6
                 $ betPairs[8] = 0 #6
                 $ betPairs[9] = 0 #6
@@ -3116,15 +3116,15 @@ label cashBets:
                 $ betPairs[13] = 0 #6
                 $ betPairs[14] = 0 #6
                 $ betDice[0] = 0 #1,2,12
-                $ betDice[1] = 0 #1,2,12
+                $ cash += (betDice[1]*2) #1,2,12
                 $ betDice[2] = 0 #1,2,12
-                $ betDice[3] = 0 #1,2,12
+                $ cash += betDice[3] #1,2,12
                 $ betDice[4] = 0 #1,2,12
                 $ betDice[5] = 0 #1,2,12
             elif Dicez == 'Three ⚂': 
-                # 2,3,4
+                # 2,3,4__
                 ""
-                $ betSmall = 0 # Chips on Small
+                $ cash += betSmall # Chips on Small
                 $ betBig = 0 # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
@@ -3144,7 +3144,7 @@ label cashBets:
                 $ betNums[2] = 0 #18
                 $ betNums[3] = 0 #12
                 $ betNums[4] = 0 #8
-                $ betNums[5] = 0 #7
+                $ cash (betNums[5]*7)
                 $ betNums[6] = 0 #6
                 $ betNums[7] = 0 #6
                 $ betNums[8] = 0 #7
@@ -3158,26 +3158,26 @@ label cashBets:
                 $ betPairs[2] = 0 #6
                 $ betPairs[3] = 0 #6
                 $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
+                $ cash += (betPairs[5]*6)
+                $ cash += (betPairs[6]*6)
                 $ betPairs[7] = 0 #6
                 $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
+                $ cash += (betPairs[9]*6)
                 $ betPairs[10] = 0 #6
                 $ betPairs[11] = 0 #6
                 $ betPairs[12] = 0 #6
                 $ betPairs[13] = 0 #6
                 $ betPairs[14] = 0 #6
                 $ betDice[0] = 0 #1,2,12
-                $ betDice[1] = 0 #1,2,12
-                $ betDice[2] = 0 #1,2,12
-                $ betDice[3] = 0 #1,2,12
+                $ cash += betDice[1] #1,2,12
+                $ cash += betDice[2] #1,2,12
+                $ cash += betDice[3] #1,2,12
                 $ betDice[4] = 0 #1,2,12
                 $ betDice[5] = 0 #1,2,12
             elif Dicez == 'Four ⚃':
-                # 2,4,4
+                # 2,4,4__
                 ""
-                $ betSmall = 0 # Chips on Small
+                $ cash += betSmall # Chips on Small
                 $ betBig = 0 # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
@@ -3189,7 +3189,7 @@ label cashBets:
                 $ betDoubs[0] = 0 #11
                 $ betDoubs[1] = 0 #11
                 $ betDoubs[2] = 0 #!1
-                $ betDoubs[3] = 0 #11
+                $ cash += (betDoubs[3]*11)
                 $ betDoubs[4] = 0 #11
                 $ betDoubs[5] = 0 #11
                 $ betNums[0] = 0 #62
@@ -3198,7 +3198,7 @@ label cashBets:
                 $ betNums[3] = 0 #12
                 $ betNums[4] = 0 #8
                 $ betNums[5] = 0 #7
-                $ betNums[6] = 0 #6
+                $ cash += (betNums[6]*6) #6
                 $ betNums[7] = 0 #6
                 $ betNums[8] = 0 #7
                 $ betNums[9] = 0 #8
@@ -3206,32 +3206,32 @@ label cashBets:
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ cash += (betPairs[6]*6) #6 24
+                $ betPairs[7] = 0 #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
-                $ betDice[1] = 0 #1,2,12
+                $ cash += betDice[1] #1,2,12
                 $ betDice[2] = 0 #1,2,12
-                $ betDice[3] = 0 #1,2,12
+                $ cash += (betDice[3]*2) #1,2,12
                 $ betDice[4] = 0 #1,2,12
                 $ betDice[5] = 0 #1,2,12
             elif Dicez == 'Five ⚄':
-                # 2,4,5
+                # 2,4,5__
                 ""
                 $ betSmall = 0 # Chips on Small
-                $ betBig = 0 # Chips on Big
+                $ cash += betBig # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
                 $ betTrips[2] = 0 #180
@@ -3252,39 +3252,39 @@ label cashBets:
                 $ betNums[4] = 0 #8
                 $ betNums[5] = 0 #7
                 $ betNums[6] = 0 #6
-                $ betNums[7] = 0 #6
+                $ cash += (betNums[7]*6)
                 $ betNums[8] = 0 #7
                 $ betNums[9] = 0 #8
                 $ betNums[10] = 0 #12
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ cash += (betPairs[6]*6) #6 24
+                $ cash += (betPairs[7]*6) #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ cash += (betPairs[12]*6) #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
-                $ betDice[1] = 0 #1,2,12
+                $ cash += betDice[1] #1,2,12
                 $ betDice[2] = 0 #1,2,12
-                $ betDice[3] = 0 #1,2,12
-                $ betDice[4] = 0 #1,2,12
+                $ cash += betDice[3] #1,2,12
+                $ cash += betDice[4] #1,2,12
                 $ betDice[5] = 0 #1,2,12
             else: #'Six ⚅'
-                # 2,4,6
+                # 2,4,6_
                 ""
                 $ betSmall = 0 # Chips on Small
-                $ betBig = 0 # Chips on Big
+                $ cash += betBig # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
                 $ betTrips[2] = 0 #180
@@ -3306,33 +3306,33 @@ label cashBets:
                 $ betNums[5] = 0 #7
                 $ betNums[6] = 0 #6
                 $ betNums[7] = 0 #6
-                $ betNums[8] = 0 #7
+                $ cash += (betNums[8]*7)
                 $ betNums[9] = 0 #8
                 $ betNums[10] = 0 #12
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ cash += (betPairs[6]*6) #6 24
+                $ betPairs[7] = 0 #6 25
+                $ cash += (betPairs[8]*6) #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ cash += (betPairs[13]*6) #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
-                $ betDice[1] = 0 #1,2,12
+                $ cash += betDice[1] #1,2,12
                 $ betDice[2] = 0 #1,2,12
-                $ betDice[3] = 0 #1,2,12
+                $ cash += betDice[3] #1,2,12
                 $ betDice[4] = 0 #1,2,12
-                $ betDice[5] = 0 #1,2,12
+                $ cash += betDice[5] #1,2,12
         elif Dicey == 'Five ⚄':
             ""
             if Dicez == 'One ⚀':
@@ -3389,9 +3389,9 @@ label cashBets:
                 $ cash += betDice[4]
                 $ betDice[5] = 0 #1,2,12
             elif Dicez == 'Two ⚁':
-                # 2,2,5
+                # 2,2,5_
                 ""
-                $ betSmall = 0 # Chips on Small
+                $ cash += betSmall # Chips on Small
                 $ betBig = 0 # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
@@ -3401,7 +3401,7 @@ label cashBets:
                 $ betTrips[5] = 0 #180
                 $ betTrips[6] = 0 #180
                 $ betDoubs[0] = 0 #11
-                $ betDoubs[1] = 0 #11
+                $ cash += (betDoubs[1]*11)
                 $ betDoubs[2] = 0 #!1
                 $ betDoubs[3] = 0 #11
                 $ betDoubs[4] = 0 #11
@@ -3411,7 +3411,7 @@ label cashBets:
                 $ betNums[2] = 0 #18
                 $ betNums[3] = 0 #12
                 $ betNums[4] = 0 #8
-                $ betNums[5] = 0 #7
+                $ cash += (betNums[5]*7)
                 $ betNums[6] = 0 #6
                 $ betNums[7] = 0 #6
                 $ betNums[8] = 0 #7
@@ -3427,7 +3427,7 @@ label cashBets:
                 $ betPairs[4] = 0 #6
                 $ betPairs[5] = 0 #6
                 $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
+                $ cash += (betPairs[7]*6)
                 $ betPairs[8] = 0 #6
                 $ betPairs[9] = 0 #6
                 $ betPairs[10] = 0 #6
@@ -3436,15 +3436,15 @@ label cashBets:
                 $ betPairs[13] = 0 #6
                 $ betPairs[14] = 0 #6
                 $ betDice[0] = 0 #1,2,12
-                $ betDice[1] = 0 #1,2,12
+                $ cash += (betDice[1]*2) #1,2,12
                 $ betDice[2] = 0 #1,2,12
                 $ betDice[3] = 0 #1,2,12
-                $ betDice[4] = 0 #1,2,12
+                $ cash += betDice[4] #1,2,12
                 $ betDice[5] = 0 #1,2,12
             elif Dicez == 'Three ⚂': 
-                # 2,3,5
+                # 2,3,5_
                 ""
-                $ betSmall = 0 # Chips on Small
+                $ cash += betSmall # Chips on Small
                 $ betBig = 0 # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
@@ -3465,7 +3465,7 @@ label cashBets:
                 $ betNums[3] = 0 #12
                 $ betNums[4] = 0 #8
                 $ betNums[5] = 0 #7
-                $ betNums[6] = 0 #6
+                $ cash += (betNums[6]*6)
                 $ betNums[7] = 0 #6
                 $ betNums[8] = 0 #7
                 $ betNums[9] = 0 #8
@@ -3478,27 +3478,27 @@ label cashBets:
                 $ betPairs[2] = 0 #6
                 $ betPairs[3] = 0 #6
                 $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
+                $ cash += (betPairs[5]*6
                 $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
+                $ cash += (betPairs[7]*6
                 $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
+                $ cash += (betPairs[9]*6)
                 $ betPairs[10] = 0 #6
                 $ betPairs[11] = 0 #6
                 $ betPairs[12] = 0 #6
                 $ betPairs[13] = 0 #6
                 $ betPairs[14] = 0 #6
                 $ betDice[0] = 0 #1,2,12
-                $ betDice[1] = 0 #1,2,12
-                $ betDice[2] = 0 #1,2,12
+                $ cash += betDice[1] #1,2,12
+                $ cash += betDice[2] #1,2,12
                 $ betDice[3] = 0 #1,2,12
-                $ betDice[4] = 0 #1,2,12
+                $ cash += betDice[4] #1,2,12
                 $ betDice[5] = 0 #1,2,12
             elif Dicez == 'Four ⚃':
-                # 2,4,5
+                # 2,4,5__
                 ""
                 $ betSmall = 0 # Chips on Small
-                $ betBig = 0 # Chips on Big
+                $ cash += betBig # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
                 $ betTrips[2] = 0 #180
@@ -3519,39 +3519,39 @@ label cashBets:
                 $ betNums[4] = 0 #8
                 $ betNums[5] = 0 #7
                 $ betNums[6] = 0 #6
-                $ betNums[7] = 0 #6
+                $ cash += (betNums[7]*6)
                 $ betNums[8] = 0 #7
                 $ betNums[9] = 0 #8
                 $ betNums[10] = 0 #12
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ cash += (betPairs[6]*6) #6 24
+                $ cash += (betPairs[7]*6) #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ cash += (betPairs[12]*6) #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
-                $ betDice[1] = 0 #1,2,12
+                $ cash += betDice[1] #1,2,12
                 $ betDice[2] = 0 #1,2,12
-                $ betDice[3] = 0 #1,2,12
-                $ betDice[4] = 0 #1,2,12
+                $ cash += betDice[3] #1,2,12
+                $ cash += betDice[4] #1,2,12
                 $ betDice[5] = 0 #1,2,12
             elif Dicez == 'Five ⚄':
-                # 2,5,5
+                # 2,5,5_
                 ""
                 $ betSmall = 0 # Chips on Small
-                $ betBig = 0 # Chips on Big
+                $ cash += betBig # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
                 $ betTrips[2] = 0 #180
@@ -3563,7 +3563,7 @@ label cashBets:
                 $ betDoubs[1] = 0 #11
                 $ betDoubs[2] = 0 #!1
                 $ betDoubs[3] = 0 #11
-                $ betDoubs[4] = 0 #11
+                $ cash += (betDoubs[4]*11) #11
                 $ betDoubs[5] = 0 #11
                 $ betNums[0] = 0 #62
                 $ betNums[1] = 0 #31
@@ -3573,38 +3573,38 @@ label cashBets:
                 $ betNums[5] = 0 #7
                 $ betNums[6] = 0 #6
                 $ betNums[7] = 0 #6
-                $ betNums[8] = 0 #7
+                $ cash += (betNums[8]*7)
                 $ betNums[9] = 0 #8
                 $ betNums[10] = 0 #12
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ cash += (betPairs[7]*6) #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
-                $ betDice[1] = 0 #1,2,12
+                $ cash += betDice[1] #1,2,12
                 $ betDice[2] = 0 #1,2,12
                 $ betDice[3] = 0 #1,2,12
-                $ betDice[4] = 0 #1,2,12
+                $ cash += (betDice[4]*2) #1,2,12
                 $ betDice[5] = 0 #1,2,12
             else: #'Six ⚅'
-                # 2,5,6
+                # 2,5,6__
                 ""
                 $ betSmall = 0 # Chips on Small
-                $ betBig = 0 # Chips on Big
+                $ cash += betBig # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
                 $ betTrips[2] = 0 #180
@@ -3627,32 +3627,32 @@ label cashBets:
                 $ betNums[6] = 0 #6
                 $ betNums[7] = 0 #6
                 $ betNums[8] = 0 #7
-                $ betNums[9] = 0 #8
+                $ cash += (betNums[9]*8)
                 $ betNums[10] = 0 #12
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ cash += (betPairs[7]*6) #6 25
+                $ cash += (betPairs[8]*6) #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ cash += (betPairs[14]*6) #6 56
                 $ betDice[0] = 0 #1,2,12
-                $ betDice[1] = 0 #1,2,12
+                $ cash += betDice[1] #1,2,12
                 $ betDice[2] = 0 #1,2,12
                 $ betDice[3] = 0 #1,2,12
-                $ betDice[4] = 0 #1,2,12
-                $ betDice[5] = 0 #1,2,12
+                $ cash += betDice[4] #1,2,12
+                $ cash += betDice[5] #1,2,12
         else: #'Six ⚅'
             ""
             if Dicez == 'One ⚀':
@@ -3709,9 +3709,9 @@ label cashBets:
                 $ betDice[4] = 0 #1,2,12
                 $ cash += betDice[5]
             elif Dicez == 'Two ⚁':
-                # 2,2,6
+                # 2,2,6_
                 ""
-                $ betSmall = 0 # Chips on Small
+                $ cash += betSmall # Chips on Small
                 $ betBig = 0 # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
@@ -3721,7 +3721,7 @@ label cashBets:
                 $ betTrips[5] = 0 #180
                 $ betTrips[6] = 0 #180
                 $ betDoubs[0] = 0 #11
-                $ betDoubs[1] = 0 #11
+                $ cash += (betDoubs[1]*11)
                 $ betDoubs[2] = 0 #!1
                 $ betDoubs[3] = 0 #11
                 $ betDoubs[4] = 0 #11
@@ -3732,7 +3732,7 @@ label cashBets:
                 $ betNums[3] = 0 #12
                 $ betNums[4] = 0 #8
                 $ betNums[5] = 0 #7
-                $ betNums[6] = 0 #6
+                $ cash += (betNums[6]*6)
                 $ betNums[7] = 0 #6
                 $ betNums[8] = 0 #7
                 $ betNums[9] = 0 #8
@@ -3748,7 +3748,7 @@ label cashBets:
                 $ betPairs[5] = 0 #6
                 $ betPairs[6] = 0 #6
                 $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
+                $ cash += (betPairs[8]*6)
                 $ betPairs[9] = 0 #6
                 $ betPairs[10] = 0 #6
                 $ betPairs[11] = 0 #6
@@ -3756,16 +3756,16 @@ label cashBets:
                 $ betPairs[13] = 0 #6
                 $ betPairs[14] = 0 #6
                 $ betDice[0] = 0 #1,2,12
-                $ betDice[1] = 0 #1,2,12
+                $ cash += betDice[1]*2) #1,2,12
                 $ betDice[2] = 0 #1,2,12
                 $ betDice[3] = 0 #1,2,12
                 $ betDice[4] = 0 #1,2,12
-                $ betDice[5] = 0 #1,2,12
+                $ cash += betDice[5] #1,2,12
             elif Dicez == 'Three ⚂': 
-                # 2,3,6
+                # 2,3,6_
                 ""
                 $ betSmall = 0 # Chips on Small
-                $ betBig = 0 # Chips on Big
+                $ cash += betBig # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
                 $ betTrips[2] = 0 #180
@@ -3786,39 +3786,39 @@ label cashBets:
                 $ betNums[4] = 0 #8
                 $ betNums[5] = 0 #7
                 $ betNums[6] = 0 #6
-                $ betNums[7] = 0 #6
+                $ cash += (betNums[7]*6)
                 $ betNums[8] = 0 #7
                 $ betNums[9] = 0 #8
                 $ betNums[10] = 0 #12
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ cash += (betPairs[5]*2) #6 23
+                $ betPairs[6] = 0 #6 24
+                $ betPairs[7] = 0 #6 25
+                $ cash += (betPairs[8]*2) #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ cash += (betPairs[11]*2) #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
-                $ betDice[1] = 0 #1,2,12
-                $ betDice[2] = 0 #1,2,12
+                $ cash += betDice[1] #1,2,12
+                $ cash += betDice[2] #1,2,12
                 $ betDice[3] = 0 #1,2,12
                 $ betDice[4] = 0 #1,2,12
-                $ betDice[5] = 0 #1,2,12
+                $ cash += betDice[5] #1,2,12
             elif Dicez == 'Four ⚃':
-                # 2,4,6
+                # 2,4,6_
                 ""
                 $ betSmall = 0 # Chips on Small
-                $ betBig = 0 # Chips on Big
+                $ cash += betBig # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
                 $ betTrips[2] = 0 #180
@@ -3840,38 +3840,38 @@ label cashBets:
                 $ betNums[5] = 0 #7
                 $ betNums[6] = 0 #6
                 $ betNums[7] = 0 #6
-                $ betNums[8] = 0 #7
+                $ cash += (betNums[8]*7)
                 $ betNums[9] = 0 #8
                 $ betNums[10] = 0 #12
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ cash += (betPairs[6]*6) #6 24
+                $ betPairs[7] = 0 #6 25
+                $ cash += (betPairs[8]*6) #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ cash += (betPairs[13]*6) #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
-                $ betDice[1] = 0 #1,2,12
+                $ cash += betDice[1] #1,2,12
                 $ betDice[2] = 0 #1,2,12
-                $ betDice[3] = 0 #1,2,12
+                $ cash += betDice[3] #1,2,12
                 $ betDice[4] = 0 #1,2,12
-                $ betDice[5] = 0 #1,2,12
+                $ cash += betDice[5] #1,2,12
             elif Dicez == 'Five ⚄':
-                # 2,5,6
+                # 2,5,6__
                 ""
                 $ betSmall = 0 # Chips on Small
-                $ betBig = 0 # Chips on Big
+                $ cash += betBig # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
                 $ betTrips[2] = 0 #180
@@ -3894,37 +3894,37 @@ label cashBets:
                 $ betNums[6] = 0 #6
                 $ betNums[7] = 0 #6
                 $ betNums[8] = 0 #7
-                $ betNums[9] = 0 #8
+                $ cash += (betNums[9]*8)
                 $ betNums[10] = 0 #12
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ cash += (betPairs[7]*6) #6 25
+                $ cash += (betPairs[8]*6) #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ cash += (betPairs[14]*6) #6 56
                 $ betDice[0] = 0 #1,2,12
-                $ betDice[1] = 0 #1,2,12
+                $ cash += betDice[1] #1,2,12
                 $ betDice[2] = 0 #1,2,12
                 $ betDice[3] = 0 #1,2,12
-                $ betDice[4] = 0 #1,2,12
-                $ betDice[5] = 0 #1,2,12
+                $ cash += betDice[4] #1,2,12
+                $ cash += betDice[5] #1,2,12
             else: #'Six ⚅'
-                # 2,6,6
+                # 2,6,6__
                 ""
                 $ betSmall = 0 # Chips on Small
-                $ betBig = 0 # Chips on Big
+                $ cash += betBig # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
                 $ betTrips[2] = 0 #180
@@ -3937,7 +3937,7 @@ label cashBets:
                 $ betDoubs[2] = 0 #!1
                 $ betDoubs[3] = 0 #11
                 $ betDoubs[4] = 0 #11
-                $ betDoubs[5] = 0 #11
+                $ cash += (betDoubs[5]*11)
                 $ betNums[0] = 0 #62
                 $ betNums[1] = 0 #31
                 $ betNums[2] = 0 #18
@@ -3948,31 +3948,31 @@ label cashBets:
                 $ betNums[7] = 0 #6
                 $ betNums[8] = 0 #7
                 $ betNums[9] = 0 #8
-                $ betNums[10] = 0 #12
+                $ cash += (betNums[10]*12)
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ betPairs[7] = 0 #6 25
+                $ cash += (betPairs[8]*6) #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
-                $ betDice[1] = 0 #1,2,12
+                $ cash += betDice[1] #1,2,12
                 $ betDice[2] = 0 #1,2,12
                 $ betDice[3] = 0 #1,2,12
                 $ betDice[4] = 0 #1,2,12
-                $ betDice[5] = 0 #1,2,12
+                $ cash += (betDice[5]*2) #1,2,12
     elif Dicex == 'Three ⚂': 
         ""
         if Dicey == 'One ⚀':
@@ -4351,9 +4351,9 @@ label cashBets:
                 $ betDice[4] = 0 #1,2,12
                 $ betDice[5] = 0 #1,2,12
             elif Dicez == 'Two ⚁':
-                # 2,2,3
+                # 2,2,3_
                 ""
-                $ betSmall = 0 # Chips on Small
+                $ cash += betSmall # Chips on Small
                 $ betBig = 0 # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
@@ -4363,7 +4363,7 @@ label cashBets:
                 $ betTrips[5] = 0 #180
                 $ betTrips[6] = 0 #180
                 $ betDoubs[0] = 0 #11
-                $ betDoubs[1] = 0 #11
+                $ cash += (betDoubs[1]*11)
                 $ betDoubs[2] = 0 #!1
                 $ betDoubs[3] = 0 #11
                 $ betDoubs[4] = 0 #11
@@ -4371,7 +4371,7 @@ label cashBets:
                 $ betNums[0] = 0 #62
                 $ betNums[1] = 0 #31
                 $ betNums[2] = 0 #18
-                $ betNums[3] = 0 #12
+                $ cash += (betNums[3]*12)
                 $ betNums[4] = 0 #8
                 $ betNums[5] = 0 #7
                 $ betNums[6] = 0 #6
@@ -4387,7 +4387,7 @@ label cashBets:
                 $ betPairs[2] = 0 #6
                 $ betPairs[3] = 0 #6
                 $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
+                $ cash += (betPairs[5]*6)
                 $ betPairs[6] = 0 #6
                 $ betPairs[7] = 0 #6
                 $ betPairs[8] = 0 #6
@@ -4398,15 +4398,15 @@ label cashBets:
                 $ betPairs[13] = 0 #6
                 $ betPairs[14] = 0 #6
                 $ betDice[0] = 0 #1,2,12
-                $ betDice[1] = 0 #1,2,12
-                $ betDice[2] = 0 #1,2,12
+                $ cash += (betDice[1]*2) #1,2,12
+                $ cash += betDice[2] #1,2,12
                 $ betDice[3] = 0 #1,2,12
                 $ betDice[4] = 0 #1,2,12
                 $ betDice[5] = 0 #1,2,12
             elif Dicez == 'Three ⚂': 
-                # 2,3,3
+                # 2,3,3_
                 ""
-                $ betSmall = 0 # Chips on Small
+                $ cash += betSmall # Chips on Small
                 $ betBig = 0 # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
@@ -4417,7 +4417,7 @@ label cashBets:
                 $ betTrips[6] = 0 #180
                 $ betDoubs[0] = 0 #11
                 $ betDoubs[1] = 0 #11
-                $ betDoubs[2] = 0 #!1
+                $ cash += (betDoubs[2]*11) #!1
                 $ betDoubs[3] = 0 #11
                 $ betDoubs[4] = 0 #11
                 $ betDoubs[5] = 0 #11
@@ -4425,7 +4425,7 @@ label cashBets:
                 $ betNums[1] = 0 #31
                 $ betNums[2] = 0 #18
                 $ betNums[3] = 0 #12
-                $ betNums[4] = 0 #8
+                $ cash += (betNums[4]*8)
                 $ betNums[5] = 0 #7
                 $ betNums[6] = 0 #6
                 $ betNums[7] = 0 #6
@@ -4440,7 +4440,7 @@ label cashBets:
                 $ betPairs[2] = 0 #6
                 $ betPairs[3] = 0 #6
                 $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
+                $ cash += (betPairs[5]*6)
                 $ betPairs[6] = 0 #6
                 $ betPairs[7] = 0 #6
                 $ betPairs[8] = 0 #6
@@ -4451,15 +4451,15 @@ label cashBets:
                 $ betPairs[13] = 0 #6
                 $ betPairs[14] = 0 #6
                 $ betDice[0] = 0 #1,2,12
-                $ betDice[1] = 0 #1,2,12
-                $ betDice[2] = 0 #1,2,12
+                $ cash += betDice[1] #1,2,12
+                $ cash += (betDice[2]*2) #1,2,12
                 $ betDice[3] = 0 #1,2,12
                 $ betDice[4] = 0 #1,2,12
                 $ betDice[5] = 0 #1,2,12
             elif Dicez == 'Four ⚃':
-                # 2,3,4
+                # 2,3,4__
                 ""
-                $ betSmall = 0 # Chips on Small
+                $ cash += betSmall # Chips on Small
                 $ betBig = 0 # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
@@ -4479,7 +4479,7 @@ label cashBets:
                 $ betNums[2] = 0 #18
                 $ betNums[3] = 0 #12
                 $ betNums[4] = 0 #8
-                $ betNums[5] = 0 #7
+                $ cash (betNums[5]*7)
                 $ betNums[6] = 0 #6
                 $ betNums[7] = 0 #6
                 $ betNums[8] = 0 #7
@@ -4493,26 +4493,26 @@ label cashBets:
                 $ betPairs[2] = 0 #6
                 $ betPairs[3] = 0 #6
                 $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
+                $ cash += (betPairs[5]*6)
+                $ cash += (betPairs[6]*6)
                 $ betPairs[7] = 0 #6
                 $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
+                $ cash += (betPairs[9]*6)
                 $ betPairs[10] = 0 #6
                 $ betPairs[11] = 0 #6
                 $ betPairs[12] = 0 #6
                 $ betPairs[13] = 0 #6
                 $ betPairs[14] = 0 #6
                 $ betDice[0] = 0 #1,2,12
-                $ betDice[1] = 0 #1,2,12
-                $ betDice[2] = 0 #1,2,12
-                $ betDice[3] = 0 #1,2,12
+                $ cash += betDice[1] #1,2,12
+                $ cash += betDice[2] #1,2,12
+                $ cash += betDice[3] #1,2,12
                 $ betDice[4] = 0 #1,2,12
                 $ betDice[5] = 0 #1,2,12
             elif Dicez == 'Five ⚄':
-                # 2,3,5
+                # 2,3,5_
                 ""
-                $ betSmall = 0 # Chips on Small
+                $ cash += betSmall # Chips on Small
                 $ betBig = 0 # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
@@ -4533,7 +4533,7 @@ label cashBets:
                 $ betNums[3] = 0 #12
                 $ betNums[4] = 0 #8
                 $ betNums[5] = 0 #7
-                $ betNums[6] = 0 #6
+                $ cash += (betNums[6]*6)
                 $ betNums[7] = 0 #6
                 $ betNums[8] = 0 #7
                 $ betNums[9] = 0 #8
@@ -4546,27 +4546,27 @@ label cashBets:
                 $ betPairs[2] = 0 #6
                 $ betPairs[3] = 0 #6
                 $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
+                $ cash += (betPairs[5]*6
                 $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
+                $ cash += (betPairs[7]*6
                 $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
+                $ cash += (betPairs[9]*6)
                 $ betPairs[10] = 0 #6
                 $ betPairs[11] = 0 #6
                 $ betPairs[12] = 0 #6
                 $ betPairs[13] = 0 #6
                 $ betPairs[14] = 0 #6
                 $ betDice[0] = 0 #1,2,12
-                $ betDice[1] = 0 #1,2,12
-                $ betDice[2] = 0 #1,2,12
+                $ cash += betDice[1] #1,2,12
+                $ cash += betDice[2] #1,2,12
                 $ betDice[3] = 0 #1,2,12
-                $ betDice[4] = 0 #1,2,12
+                $ cash += betDice[4] #1,2,12
                 $ betDice[5] = 0 #1,2,12
             else: #'Six ⚅'
-                # 2,3,6
+                # 2,3,6_
                 ""
                 $ betSmall = 0 # Chips on Small
-                $ betBig = 0 # Chips on Big
+                $ cash += betBig # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
                 $ betTrips[2] = 0 #180
@@ -4587,34 +4587,34 @@ label cashBets:
                 $ betNums[4] = 0 #8
                 $ betNums[5] = 0 #7
                 $ betNums[6] = 0 #6
-                $ betNums[7] = 0 #6
+                $ cash += (betNums[7]*6)
                 $ betNums[8] = 0 #7
                 $ betNums[9] = 0 #8
                 $ betNums[10] = 0 #12
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ cash += (betPairs[5]*2) #6 23
+                $ betPairs[6] = 0 #6 24
+                $ betPairs[7] = 0 #6 25
+                $ cash += (betPairs[8]*2) #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ cash += (betPairs[11]*2) #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
-                $ betDice[1] = 0 #1,2,12
-                $ betDice[2] = 0 #1,2,12
+                $ cash += betDice[1] #1,2,12
+                $ cash += betDice[2] #1,2,12
                 $ betDice[3] = 0 #1,2,12
                 $ betDice[4] = 0 #1,2,12
-                $ betDice[5] = 0 #1,2,12
+                $ cash += betDice[5] #1,2,12
         elif Dicey == 'Three ⚂': 
             ""
             if Dicez == 'One ⚀':
@@ -4671,9 +4671,9 @@ label cashBets:
                 $ betDice[4] = 0 #1,2,12
                 $ betDice[5] = 0 #1,2,12
             elif Dicez == 'Two ⚁':
-                # 2,3,3
+                # 2,3,3_
                 ""
-                $ betSmall = 0 # Chips on Small
+                $ cash += betSmall # Chips on Small
                 $ betBig = 0 # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
@@ -4684,7 +4684,7 @@ label cashBets:
                 $ betTrips[6] = 0 #180
                 $ betDoubs[0] = 0 #11
                 $ betDoubs[1] = 0 #11
-                $ betDoubs[2] = 0 #!1
+                $ cash += (betDoubs[2]*11) #!1
                 $ betDoubs[3] = 0 #11
                 $ betDoubs[4] = 0 #11
                 $ betDoubs[5] = 0 #11
@@ -4692,7 +4692,7 @@ label cashBets:
                 $ betNums[1] = 0 #31
                 $ betNums[2] = 0 #18
                 $ betNums[3] = 0 #12
-                $ betNums[4] = 0 #8
+                $ cash += (betNums[4]*8)
                 $ betNums[5] = 0 #7
                 $ betNums[6] = 0 #6
                 $ betNums[7] = 0 #6
@@ -4707,7 +4707,7 @@ label cashBets:
                 $ betPairs[2] = 0 #6
                 $ betPairs[3] = 0 #6
                 $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
+                $ cash += (betPairs[5]*6)
                 $ betPairs[6] = 0 #6
                 $ betPairs[7] = 0 #6
                 $ betPairs[8] = 0 #6
@@ -4718,20 +4718,20 @@ label cashBets:
                 $ betPairs[13] = 0 #6
                 $ betPairs[14] = 0 #6
                 $ betDice[0] = 0 #1,2,12
-                $ betDice[1] = 0 #1,2,12
-                $ betDice[2] = 0 #1,2,12
+                $ cash += betDice[1] #1,2,12
+                $ cash += (betDice[2]*2) #1,2,12
                 $ betDice[3] = 0 #1,2,12
                 $ betDice[4] = 0 #1,2,12
                 $ betDice[5] = 0 #1,2,12
             elif Dicez == 'Three ⚂':
-                # 3,3,3
+                # 3,3,3__
                 ""
                 $ betSmall = 0 # Chips on Small
                 $ betBig = 0 # Chips on Big
-                $ betTrips[0] = 0 #31
+                $ cash += (betTrips[0]*31)
                 $ betTrips[1] = 0 #180
                 $ betTrips[2] = 0 #180
-                $ betTrips[3] = 0 #180
+                $ cash += (betTrips[3]*180)
                 $ betTrips[4] = 0 #180
                 $ betTrips[5] = 0 #180
                 $ betTrips[6] = 0 #180
@@ -4746,7 +4746,7 @@ label cashBets:
                 $ betNums[2] = 0 #18
                 $ betNums[3] = 0 #12
                 $ betNums[4] = 0 #8
-                $ betNums[5] = 0 #7
+                $ cash += (betNums[5]*7)
                 $ betNums[6] = 0 #6
                 $ betNums[7] = 0 #6
                 $ betNums[8] = 0 #7
@@ -4755,24 +4755,24 @@ label cashBets:
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ betPairs[7] = 0 #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
                 $ betDice[1] = 0 #1,2,12
-                $ betDice[2] = 0 #1,2,12
+                $ cash += (betDice[2]*12)
                 $ betDice[3] = 0 #1,2,12
                 $ betDice[4] = 0 #1,2,12
                 $ betDice[5] = 0 #1,2,12
@@ -4808,21 +4808,21 @@ label cashBets:
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ betPairs[7] = 0 #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
@@ -4861,21 +4861,21 @@ label cashBets:
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ betPairs[7] = 0 #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
@@ -4914,21 +4914,21 @@ label cashBets:
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ betPairs[7] = 0 #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
@@ -4991,9 +4991,9 @@ label cashBets:
                 $ betDice[4] = 0 #1,2,12
                 $ betDice[5] = 0 #1,2,12
             elif Dicez == 'Two ⚁':
-                # 2,3,4
+                # 2,3,4__
                 ""
-                $ betSmall = 0 # Chips on Small
+                $ cash += betSmall # Chips on Small
                 $ betBig = 0 # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
@@ -5013,7 +5013,7 @@ label cashBets:
                 $ betNums[2] = 0 #18
                 $ betNums[3] = 0 #12
                 $ betNums[4] = 0 #8
-                $ betNums[5] = 0 #7
+                $ cash (betNums[5]*7)
                 $ betNums[6] = 0 #6
                 $ betNums[7] = 0 #6
                 $ betNums[8] = 0 #7
@@ -5027,20 +5027,20 @@ label cashBets:
                 $ betPairs[2] = 0 #6
                 $ betPairs[3] = 0 #6
                 $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
+                $ cash += (betPairs[5]*6)
+                $ cash += (betPairs[6]*6)
                 $ betPairs[7] = 0 #6
                 $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
+                $ cash += (betPairs[9]*6)
                 $ betPairs[10] = 0 #6
                 $ betPairs[11] = 0 #6
                 $ betPairs[12] = 0 #6
                 $ betPairs[13] = 0 #6
                 $ betPairs[14] = 0 #6
                 $ betDice[0] = 0 #1,2,12
-                $ betDice[1] = 0 #1,2,12
-                $ betDice[2] = 0 #1,2,12
-                $ betDice[3] = 0 #1,2,12
+                $ cash += betDice[1] #1,2,12
+                $ cash += betDice[2] #1,2,12
+                $ cash += betDice[3] #1,2,12
                 $ betDice[4] = 0 #1,2,12
                 $ betDice[5] = 0 #1,2,12
             elif Dicez == 'Three ⚂': 
@@ -5075,21 +5075,21 @@ label cashBets:
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ betPairs[7] = 0 #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
@@ -5128,21 +5128,21 @@ label cashBets:
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ betPairs[7] = 0 #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
@@ -5181,21 +5181,21 @@ label cashBets:
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ betPairs[7] = 0 #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
@@ -5234,21 +5234,21 @@ label cashBets:
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ betPairs[7] = 0 #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
@@ -5311,9 +5311,9 @@ label cashBets:
                 $ cash += betDice[4]
                 $ betDice[5] = 0 #1,2,12
             elif Dicez == 'Two ⚁':
-                # 2,3,5
+                # 2,3,5_
                 ""
-                $ betSmall = 0 # Chips on Small
+                $ cash += betSmall # Chips on Small
                 $ betBig = 0 # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
@@ -5334,7 +5334,7 @@ label cashBets:
                 $ betNums[3] = 0 #12
                 $ betNums[4] = 0 #8
                 $ betNums[5] = 0 #7
-                $ betNums[6] = 0 #6
+                $ cash += (betNums[6]*6)
                 $ betNums[7] = 0 #6
                 $ betNums[8] = 0 #7
                 $ betNums[9] = 0 #8
@@ -5347,21 +5347,21 @@ label cashBets:
                 $ betPairs[2] = 0 #6
                 $ betPairs[3] = 0 #6
                 $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
+                $ cash += (betPairs[5]*6
                 $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
+                $ cash += (betPairs[7]*6
                 $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
+                $ cash += (betPairs[9]*6)
                 $ betPairs[10] = 0 #6
                 $ betPairs[11] = 0 #6
                 $ betPairs[12] = 0 #6
                 $ betPairs[13] = 0 #6
                 $ betPairs[14] = 0 #6
                 $ betDice[0] = 0 #1,2,12
-                $ betDice[1] = 0 #1,2,12
-                $ betDice[2] = 0 #1,2,12
+                $ cash += betDice[1] #1,2,12
+                $ cash += betDice[2] #1,2,12
                 $ betDice[3] = 0 #1,2,12
-                $ betDice[4] = 0 #1,2,12
+                $ cash += betDice[4] #1,2,12
                 $ betDice[5] = 0 #1,2,12
             elif Dicez == 'Three ⚂': 
                 # 3,3,5
@@ -5395,21 +5395,21 @@ label cashBets:
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ betPairs[7] = 0 #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
@@ -5448,21 +5448,21 @@ label cashBets:
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ betPairs[7] = 0 #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
@@ -5501,21 +5501,21 @@ label cashBets:
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ betPairs[7] = 0 #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
@@ -5554,21 +5554,21 @@ label cashBets:
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ betPairs[7] = 0 #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
@@ -5631,10 +5631,10 @@ label cashBets:
                 $ betDice[4] = 0 #1,2,12
                 $ cash += betDice[5]
             elif Dicez == 'Two ⚁':
-                # 2,3,6
+                # 2,3,6_
                 ""
                 $ betSmall = 0 # Chips on Small
-                $ betBig = 0 # Chips on Big
+                $ cash += betBig # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
                 $ betTrips[2] = 0 #180
@@ -5655,34 +5655,34 @@ label cashBets:
                 $ betNums[4] = 0 #8
                 $ betNums[5] = 0 #7
                 $ betNums[6] = 0 #6
-                $ betNums[7] = 0 #6
+                $ cash += (betNums[7]*6)
                 $ betNums[8] = 0 #7
                 $ betNums[9] = 0 #8
                 $ betNums[10] = 0 #12
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ cash += (betPairs[5]*2) #6 23
+                $ betPairs[6] = 0 #6 24
+                $ betPairs[7] = 0 #6 25
+                $ cash += (betPairs[8]*2) #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ cash += (betPairs[11]*2) #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
-                $ betDice[1] = 0 #1,2,12
-                $ betDice[2] = 0 #1,2,12
+                $ cash += betDice[1] #1,2,12
+                $ cash += betDice[2] #1,2,12
                 $ betDice[3] = 0 #1,2,12
                 $ betDice[4] = 0 #1,2,12
-                $ betDice[5] = 0 #1,2,12
+                $ cash += betDice[5] #1,2,12
             elif Dicez == 'Three ⚂': 
                 # 3,3,6
                 ""
@@ -5715,21 +5715,21 @@ label cashBets:
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ betPairs[7] = 0 #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
@@ -5768,21 +5768,21 @@ label cashBets:
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ betPairs[7] = 0 #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
@@ -5821,21 +5821,21 @@ label cashBets:
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ betPairs[7] = 0 #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
@@ -5874,21 +5874,21 @@ label cashBets:
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ betPairs[7] = 0 #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
@@ -5900,7 +5900,7 @@ label cashBets:
         if Dicey == 'One ⚀':
             ""
             if Dicez == 'One ⚀':
-                # 1,1,4
+                # 1,1,4_
                 ""
                 $ cash += betSmall# Chips on Small
                 $ betBig = 0 # Chips on Big
@@ -5931,9 +5931,9 @@ label cashBets:
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ cash += (betPairs[0]*6)
+                $ cash += (betPairs[2]*6)
                 $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
+                $ betPairs[0] = 0 #6
                 $ betPairs[3] = 0 #6
                 $ betPairs[4] = 0 #6
                 $ betPairs[5] = 0 #6
@@ -6059,9 +6059,9 @@ label cashBets:
                 $ betDice[4] = 0 #1,2,12
                 $ betDice[5] = 0 #1,2,12
             elif Dicez == 'Four ⚃':
-                # 1,4,4
+                # 1,4,4_
                 ""
-                $ betSmall = 0 # Chips on Small
+                $ cash += betSmall# Chips on Small
                 $ betBig = 0 # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
@@ -6073,7 +6073,7 @@ label cashBets:
                 $ betDoubs[0] = 0 #11
                 $ betDoubs[1] = 0 #11
                 $ betDoubs[2] = 0 #!1
-                $ betDoubs[3] = 0 #11
+                $ cash += (betDoubs[3]*11)
                 $ betDoubs[4] = 0 #11
                 $ betDoubs[5] = 0 #11
                 $ betNums[0] = 0 #62
@@ -6081,7 +6081,7 @@ label cashBets:
                 $ betNums[2] = 0 #18
                 $ betNums[3] = 0 #12
                 $ betNums[4] = 0 #8
-                $ betNums[5] = 0 #7
+                $ cash += (betNums[5]*7)
                 $ betNums[6] = 0 #6
                 $ betNums[7] = 0 #6
                 $ betNums[8] = 0 #7
@@ -6092,7 +6092,7 @@ label cashBets:
                 $ betNums[13] = 0 #62
                 $ betPairs[0] = 0 #6
                 $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
+                $ cash += (betPairs[2]*6)
                 $ betPairs[3] = 0 #6
                 $ betPairs[4] = 0 #6
                 $ betPairs[5] = 0 #6
@@ -6105,16 +6105,16 @@ label cashBets:
                 $ betPairs[12] = 0 #6
                 $ betPairs[13] = 0 #6
                 $ betPairs[14] = 0 #6
-                $ betDice[0] = 0 #1,2,12
+                $ cash += betDice[0]
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
-                $ betDice[3] = 0 #1,2,12
+                $ cash += (betDice[3]*2)
                 $ betDice[4] = 0 #1,2,12
                 $ betDice[5] = 0 #1,2,12
             elif Dicez == 'Five ⚄':
-                # 1,4,5
+                # 1,4,5__
                 ""
-                $ betSmall = 0 # Chips on Small
+                $ cash += betSmall # Chips on Small
                 $ betBig = 0 # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
@@ -6135,7 +6135,7 @@ label cashBets:
                 $ betNums[3] = 0 #12
                 $ betNums[4] = 0 #8
                 $ betNums[5] = 0 #7
-                $ betNums[6] = 0 #6
+                $ cash += (betNums[6]*6)
                 $ betNums[7] = 0 #6
                 $ betNums[8] = 0 #7
                 $ betNums[9] = 0 #8
@@ -6145,8 +6145,8 @@ label cashBets:
                 $ betNums[13] = 0 #62
                 $ betPairs[0] = 0 #6
                 $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
+                $ cash += (betPairs[2]*6)
+                $ cash += (betPairs[3]*6)
                 $ betPairs[4] = 0 #6
                 $ betPairs[5] = 0 #6
                 $ betPairs[6] = 0 #6
@@ -6155,20 +6155,20 @@ label cashBets:
                 $ betPairs[9] = 0 #6
                 $ betPairs[10] = 0 #6
                 $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
+                $ cash += (betPairs[12]*6)
                 $ betPairs[13] = 0 #6
                 $ betPairs[14] = 0 #6
-                $ betDice[0] = 0 #1,2,12
+                $ cash += betDice[0]
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
-                $ betDice[3] = 0 #1,2,12
-                $ betDice[4] = 0 #1,2,12
+                $ cash += betDice[3]
+                $ cash += betDice[4]
                 $ betDice[5] = 0 #1,2,12
             else: #'Six ⚅'
-                # 1,4,6
+                # 1,4,6__
                 ""
                 $ betSmall = 0 # Chips on Small
-                $ betBig = 0 # Chips on Big
+                $ cash += betBig # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
                 $ betTrips[2] = 0 #180
@@ -6189,7 +6189,7 @@ label cashBets:
                 $ betNums[4] = 0 #8
                 $ betNums[5] = 0 #7
                 $ betNums[6] = 0 #6
-                $ betNums[7] = 0 #6
+                $ cash += (betNums[7]*6)
                 $ betNums[8] = 0 #7
                 $ betNums[9] = 0 #8
                 $ betNums[10] = 0 #12
@@ -6198,9 +6198,9 @@ label cashBets:
                 $ betNums[13] = 0 #62
                 $ betPairs[0] = 0 #6
                 $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
+                $ cash += (betPairs[2]*6)
                 $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
+                $ cash += (betPairs[4]*6)
                 $ betPairs[5] = 0 #6
                 $ betPairs[6] = 0 #6
                 $ betPairs[7] = 0 #6
@@ -6209,14 +6209,14 @@ label cashBets:
                 $ betPairs[10] = 0 #6
                 $ betPairs[11] = 0 #6
                 $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
+                $ cash += (betPairs[13]*6)
                 $ betPairs[14] = 0 #6
-                $ betDice[0] = 0 #1,2,12
+                $ cash += betDice[0] #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
-                $ betDice[3] = 0 #1,2,12
+                $ cash += betDice[3] #1,2,12
                 $ betDice[4] = 0 #1,2,12
-                $ betDice[5] = 0 #1,2,12
+                $ cash += betDice[5] #1,2,12
         elif Dicey == 'Two ⚁':
             ""
             if Dicez == 'One ⚀':
@@ -6273,9 +6273,9 @@ label cashBets:
                 $ betDice[4] = 0 #1,2,12
                 $ betDice[5] = 0 #1,2,12
             elif Dicez == 'Two ⚁':
-                # 2,2,4
+                # 2,2,4__
                 ""
-                $ betSmall = 0 # Chips on Small
+                $ cash += betSmall # Chips on Small
                 $ betBig = 0 # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
@@ -6285,7 +6285,7 @@ label cashBets:
                 $ betTrips[5] = 0 #180
                 $ betTrips[6] = 0 #180
                 $ betDoubs[0] = 0 #11
-                $ betDoubs[1] = 0 #11
+                $ cash += (betDoubs[1]*11)
                 $ betDoubs[2] = 0 #!1
                 $ betDoubs[3] = 0 #11
                 $ betDoubs[4] = 0 #11
@@ -6294,7 +6294,7 @@ label cashBets:
                 $ betNums[1] = 0 #31
                 $ betNums[2] = 0 #18
                 $ betNums[3] = 0 #12
-                $ betNums[4] = 0 #8
+                $ cash += (betNums[4]*8)
                 $ betNums[5] = 0 #7
                 $ betNums[6] = 0 #6
                 $ betNums[7] = 0 #6
@@ -6310,7 +6310,7 @@ label cashBets:
                 $ betPairs[3] = 0 #6
                 $ betPairs[4] = 0 #6
                 $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
+                $ cash += (betPairs[6]*6)
                 $ betPairs[7] = 0 #6
                 $ betPairs[8] = 0 #6
                 $ betPairs[9] = 0 #6
@@ -6320,15 +6320,15 @@ label cashBets:
                 $ betPairs[13] = 0 #6
                 $ betPairs[14] = 0 #6
                 $ betDice[0] = 0 #1,2,12
-                $ betDice[1] = 0 #1,2,12
+                $ cash += (betDice[1]*2) #1,2,12
                 $ betDice[2] = 0 #1,2,12
-                $ betDice[3] = 0 #1,2,12
+                $ cash += betDice[3] #1,2,12
                 $ betDice[4] = 0 #1,2,12
                 $ betDice[5] = 0 #1,2,12
             elif Dicez == 'Three ⚂': 
-                # 2,3,4
+                # 2,3,4__
                 ""
-                $ betSmall = 0 # Chips on Small
+                $ cash += betSmall # Chips on Small
                 $ betBig = 0 # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
@@ -6348,7 +6348,7 @@ label cashBets:
                 $ betNums[2] = 0 #18
                 $ betNums[3] = 0 #12
                 $ betNums[4] = 0 #8
-                $ betNums[5] = 0 #7
+                $ cash (betNums[5]*7)
                 $ betNums[6] = 0 #6
                 $ betNums[7] = 0 #6
                 $ betNums[8] = 0 #7
@@ -6362,26 +6362,26 @@ label cashBets:
                 $ betPairs[2] = 0 #6
                 $ betPairs[3] = 0 #6
                 $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
+                $ cash += (betPairs[5]*6)
+                $ cash += (betPairs[6]*6)
                 $ betPairs[7] = 0 #6
                 $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
+                $ cash += (betPairs[9]*6)
                 $ betPairs[10] = 0 #6
                 $ betPairs[11] = 0 #6
                 $ betPairs[12] = 0 #6
                 $ betPairs[13] = 0 #6
                 $ betPairs[14] = 0 #6
                 $ betDice[0] = 0 #1,2,12
-                $ betDice[1] = 0 #1,2,12
-                $ betDice[2] = 0 #1,2,12
-                $ betDice[3] = 0 #1,2,12
+                $ cash += betDice[1] #1,2,12
+                $ cash += betDice[2] #1,2,12
+                $ cash += betDice[3] #1,2,12
                 $ betDice[4] = 0 #1,2,12
                 $ betDice[5] = 0 #1,2,12
             elif Dicez == 'Four ⚃':
-                # 2,4,4
+                # 2,4,4__
                 ""
-                $ betSmall = 0 # Chips on Small
+                $ cash += betSmall # Chips on Small
                 $ betBig = 0 # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
@@ -6393,7 +6393,7 @@ label cashBets:
                 $ betDoubs[0] = 0 #11
                 $ betDoubs[1] = 0 #11
                 $ betDoubs[2] = 0 #!1
-                $ betDoubs[3] = 0 #11
+                $ cash += (betDoubs[3]*11)
                 $ betDoubs[4] = 0 #11
                 $ betDoubs[5] = 0 #11
                 $ betNums[0] = 0 #62
@@ -6402,7 +6402,7 @@ label cashBets:
                 $ betNums[3] = 0 #12
                 $ betNums[4] = 0 #8
                 $ betNums[5] = 0 #7
-                $ betNums[6] = 0 #6
+                $ cash += (betNums[6]*6) #6
                 $ betNums[7] = 0 #6
                 $ betNums[8] = 0 #7
                 $ betNums[9] = 0 #8
@@ -6410,32 +6410,32 @@ label cashBets:
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ cash += (betPairs[6]*6) #6 24
+                $ betPairs[7] = 0 #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
-                $ betDice[1] = 0 #1,2,12
+                $ cash += betDice[1] #1,2,12
                 $ betDice[2] = 0 #1,2,12
-                $ betDice[3] = 0 #1,2,12
+                $ cash += (betDice[3]*2) #1,2,12
                 $ betDice[4] = 0 #1,2,12
                 $ betDice[5] = 0 #1,2,12
             elif Dicez == 'Five ⚄':
-                # 2,4,5
+                # 2,4,5__
                 ""
                 $ betSmall = 0 # Chips on Small
-                $ betBig = 0 # Chips on Big
+                $ cash += betBig # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
                 $ betTrips[2] = 0 #180
@@ -6456,39 +6456,39 @@ label cashBets:
                 $ betNums[4] = 0 #8
                 $ betNums[5] = 0 #7
                 $ betNums[6] = 0 #6
-                $ betNums[7] = 0 #6
+                $ cash += (betNums[7]*6)
                 $ betNums[8] = 0 #7
                 $ betNums[9] = 0 #8
                 $ betNums[10] = 0 #12
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ cash += (betPairs[6]*6) #6 24
+                $ cash += (betPairs[7]*6) #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ cash += (betPairs[12]*6) #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
-                $ betDice[1] = 0 #1,2,12
+                $ cash += betDice[1] #1,2,12
                 $ betDice[2] = 0 #1,2,12
-                $ betDice[3] = 0 #1,2,12
-                $ betDice[4] = 0 #1,2,12
+                $ cash += betDice[3] #1,2,12
+                $ cash += betDice[4] #1,2,12
                 $ betDice[5] = 0 #1,2,12
             else: #'Six ⚅'
-                # 2,4,6
+                # 2,4,6_
                 ""
                 $ betSmall = 0 # Chips on Small
-                $ betBig = 0 # Chips on Big
+                $ cash += betBig # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
                 $ betTrips[2] = 0 #180
@@ -6510,33 +6510,33 @@ label cashBets:
                 $ betNums[5] = 0 #7
                 $ betNums[6] = 0 #6
                 $ betNums[7] = 0 #6
-                $ betNums[8] = 0 #7
+                $ cash += (betNums[8]*7)
                 $ betNums[9] = 0 #8
                 $ betNums[10] = 0 #12
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ cash += (betPairs[6]*6) #6 24
+                $ betPairs[7] = 0 #6 25
+                $ cash += (betPairs[8]*6) #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ cash += (betPairs[13]*6) #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
-                $ betDice[1] = 0 #1,2,12
+                $ cash += betDice[1] #1,2,12
                 $ betDice[2] = 0 #1,2,12
-                $ betDice[3] = 0 #1,2,12
+                $ cash += betDice[3] #1,2,12
                 $ betDice[4] = 0 #1,2,12
-                $ betDice[5] = 0 #1,2,12
+                $ cash += betDice[5] #1,2,12
         elif Dicey == 'Three ⚂': 
             ""
             if Dicez == 'One ⚀':
@@ -6593,9 +6593,9 @@ label cashBets:
                 $ betDice[4] = 0 #1,2,12
                 $ betDice[5] = 0 #1,2,12
             elif Dicez == 'Two ⚁':
-                # 2,3,4
+                # 2,3,4__
                 ""
-                $ betSmall = 0 # Chips on Small
+                $ cash += betSmall # Chips on Small
                 $ betBig = 0 # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
@@ -6615,7 +6615,7 @@ label cashBets:
                 $ betNums[2] = 0 #18
                 $ betNums[3] = 0 #12
                 $ betNums[4] = 0 #8
-                $ betNums[5] = 0 #7
+                $ cash (betNums[5]*7)
                 $ betNums[6] = 0 #6
                 $ betNums[7] = 0 #6
                 $ betNums[8] = 0 #7
@@ -6629,20 +6629,20 @@ label cashBets:
                 $ betPairs[2] = 0 #6
                 $ betPairs[3] = 0 #6
                 $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
+                $ cash += (betPairs[5]*6)
+                $ cash += (betPairs[6]*6)
                 $ betPairs[7] = 0 #6
                 $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
+                $ cash += (betPairs[9]*6)
                 $ betPairs[10] = 0 #6
                 $ betPairs[11] = 0 #6
                 $ betPairs[12] = 0 #6
                 $ betPairs[13] = 0 #6
                 $ betPairs[14] = 0 #6
                 $ betDice[0] = 0 #1,2,12
-                $ betDice[1] = 0 #1,2,12
-                $ betDice[2] = 0 #1,2,12
-                $ betDice[3] = 0 #1,2,12
+                $ cash += betDice[1] #1,2,12
+                $ cash += betDice[2] #1,2,12
+                $ cash += betDice[3] #1,2,12
                 $ betDice[4] = 0 #1,2,12
                 $ betDice[5] = 0 #1,2,12
             elif Dicez == 'Three ⚂': 
@@ -6677,21 +6677,21 @@ label cashBets:
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ betPairs[7] = 0 #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
@@ -6730,21 +6730,21 @@ label cashBets:
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ betPairs[7] = 0 #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
@@ -6783,21 +6783,21 @@ label cashBets:
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ betPairs[7] = 0 #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
@@ -6836,21 +6836,21 @@ label cashBets:
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ betPairs[7] = 0 #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
@@ -6860,9 +6860,9 @@ label cashBets:
         elif Dicey == 'Four ⚃':
             ""
             if Dicez == 'One ⚀':
-                # 1,4,4
+                # 1,4,4_
                 ""
-                $ betSmall = 0 # Chips on Small
+                $ cash += betSmall# Chips on Small
                 $ betBig = 0 # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
@@ -6874,7 +6874,7 @@ label cashBets:
                 $ betDoubs[0] = 0 #11
                 $ betDoubs[1] = 0 #11
                 $ betDoubs[2] = 0 #!1
-                $ betDoubs[3] = 0 #11
+                $ cash += (betDoubs[3]*11)
                 $ betDoubs[4] = 0 #11
                 $ betDoubs[5] = 0 #11
                 $ betNums[0] = 0 #62
@@ -6882,7 +6882,7 @@ label cashBets:
                 $ betNums[2] = 0 #18
                 $ betNums[3] = 0 #12
                 $ betNums[4] = 0 #8
-                $ betNums[5] = 0 #7
+                $ cash += (betNums[5]*7)
                 $ betNums[6] = 0 #6
                 $ betNums[7] = 0 #6
                 $ betNums[8] = 0 #7
@@ -6893,7 +6893,7 @@ label cashBets:
                 $ betNums[13] = 0 #62
                 $ betPairs[0] = 0 #6
                 $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
+                $ cash += (betPairs[2]*6)
                 $ betPairs[3] = 0 #6
                 $ betPairs[4] = 0 #6
                 $ betPairs[5] = 0 #6
@@ -6906,16 +6906,16 @@ label cashBets:
                 $ betPairs[12] = 0 #6
                 $ betPairs[13] = 0 #6
                 $ betPairs[14] = 0 #6
-                $ betDice[0] = 0 #1,2,12
+                $ cash += betDice[0]
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
-                $ betDice[3] = 0 #1,2,12
+                $ cash += (betDice[3]*2)
                 $ betDice[4] = 0 #1,2,12
                 $ betDice[5] = 0 #1,2,12
             elif Dicez == 'Two ⚁':
-                # 2,4,4
+                # 2,4,4__
                 ""
-                $ betSmall = 0 # Chips on Small
+                $ cash += betSmall # Chips on Small
                 $ betBig = 0 # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
@@ -6927,7 +6927,7 @@ label cashBets:
                 $ betDoubs[0] = 0 #11
                 $ betDoubs[1] = 0 #11
                 $ betDoubs[2] = 0 #!1
-                $ betDoubs[3] = 0 #11
+                $ cash += (betDoubs[3]*11)
                 $ betDoubs[4] = 0 #11
                 $ betDoubs[5] = 0 #11
                 $ betNums[0] = 0 #62
@@ -6936,7 +6936,7 @@ label cashBets:
                 $ betNums[3] = 0 #12
                 $ betNums[4] = 0 #8
                 $ betNums[5] = 0 #7
-                $ betNums[6] = 0 #6
+                $ cash += (betNums[6]*6) #6
                 $ betNums[7] = 0 #6
                 $ betNums[8] = 0 #7
                 $ betNums[9] = 0 #8
@@ -6944,25 +6944,25 @@ label cashBets:
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ cash += (betPairs[6]*6) #6 24
+                $ betPairs[7] = 0 #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
-                $ betDice[1] = 0 #1,2,12
+                $ cash += betDice[1] #1,2,12
                 $ betDice[2] = 0 #1,2,12
-                $ betDice[3] = 0 #1,2,12
+                $ cash += (betDice[3]*2) #1,2,12
                 $ betDice[4] = 0 #1,2,12
                 $ betDice[5] = 0 #1,2,12
             elif Dicez == 'Three ⚂': 
@@ -6997,21 +6997,21 @@ label cashBets:
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ betPairs[7] = 0 #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
@@ -7050,21 +7050,21 @@ label cashBets:
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ betPairs[7] = 0 #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
@@ -7103,21 +7103,21 @@ label cashBets:
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ betPairs[7] = 0 #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
@@ -7156,21 +7156,21 @@ label cashBets:
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ betPairs[7] = 0 #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
@@ -7180,9 +7180,9 @@ label cashBets:
         elif Dicey == 'Five ⚄':
             ""
             if Dicez == 'One ⚀':
-                # 1,4,5
+                # 1,4,5__
                 ""
-                $ betSmall = 0 # Chips on Small
+                $ cash += betSmall # Chips on Small
                 $ betBig = 0 # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
@@ -7203,7 +7203,7 @@ label cashBets:
                 $ betNums[3] = 0 #12
                 $ betNums[4] = 0 #8
                 $ betNums[5] = 0 #7
-                $ betNums[6] = 0 #6
+                $ cash += (betNums[6]*6)
                 $ betNums[7] = 0 #6
                 $ betNums[8] = 0 #7
                 $ betNums[9] = 0 #8
@@ -7213,8 +7213,8 @@ label cashBets:
                 $ betNums[13] = 0 #62
                 $ betPairs[0] = 0 #6
                 $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
+                $ cash += (betPairs[2]*6)
+                $ cash += (betPairs[3]*6)
                 $ betPairs[4] = 0 #6
                 $ betPairs[5] = 0 #6
                 $ betPairs[6] = 0 #6
@@ -7223,20 +7223,20 @@ label cashBets:
                 $ betPairs[9] = 0 #6
                 $ betPairs[10] = 0 #6
                 $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
+                $ cash += (betPairs[12]*6)
                 $ betPairs[13] = 0 #6
                 $ betPairs[14] = 0 #6
-                $ betDice[0] = 0 #1,2,12
+                $ cash += betDice[0]
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
-                $ betDice[3] = 0 #1,2,12
-                $ betDice[4] = 0 #1,2,12
+                $ cash += betDice[3]
+                $ cash += betDice[4]
                 $ betDice[5] = 0 #1,2,12
             elif Dicez == 'Two ⚁':
-                # 2,4,5
+                # 2,4,5__
                 ""
                 $ betSmall = 0 # Chips on Small
-                $ betBig = 0 # Chips on Big
+                $ cash += betBig # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
                 $ betTrips[2] = 0 #180
@@ -7257,33 +7257,33 @@ label cashBets:
                 $ betNums[4] = 0 #8
                 $ betNums[5] = 0 #7
                 $ betNums[6] = 0 #6
-                $ betNums[7] = 0 #6
+                $ cash += (betNums[7]*6)
                 $ betNums[8] = 0 #7
                 $ betNums[9] = 0 #8
                 $ betNums[10] = 0 #12
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ cash += (betPairs[6]*6) #6 24
+                $ cash += (betPairs[7]*6) #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ cash += (betPairs[12]*6) #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
-                $ betDice[1] = 0 #1,2,12
+                $ cash += betDice[1] #1,2,12
                 $ betDice[2] = 0 #1,2,12
-                $ betDice[3] = 0 #1,2,12
-                $ betDice[4] = 0 #1,2,12
+                $ cash += betDice[3] #1,2,12
+                $ cash += betDice[4] #1,2,12
                 $ betDice[5] = 0 #1,2,12
             elif Dicez == 'Three ⚂': 
                 # 3,4,5
@@ -7317,21 +7317,21 @@ label cashBets:
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ betPairs[7] = 0 #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
@@ -7370,21 +7370,21 @@ label cashBets:
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ betPairs[7] = 0 #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
@@ -7423,21 +7423,21 @@ label cashBets:
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ betPairs[7] = 0 #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
@@ -7476,21 +7476,21 @@ label cashBets:
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ betPairs[7] = 0 #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
@@ -7500,10 +7500,10 @@ label cashBets:
         else: #'Six ⚅'
             ""
             if Dicez == 'One ⚀':
-                # 1,4,6
+                # 1,4,6__
                 ""
                 $ betSmall = 0 # Chips on Small
-                $ betBig = 0 # Chips on Big
+                $ cash += betBig # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
                 $ betTrips[2] = 0 #180
@@ -7524,7 +7524,7 @@ label cashBets:
                 $ betNums[4] = 0 #8
                 $ betNums[5] = 0 #7
                 $ betNums[6] = 0 #6
-                $ betNums[7] = 0 #6
+                $ cash += (betNums[7]*6)
                 $ betNums[8] = 0 #7
                 $ betNums[9] = 0 #8
                 $ betNums[10] = 0 #12
@@ -7533,9 +7533,9 @@ label cashBets:
                 $ betNums[13] = 0 #62
                 $ betPairs[0] = 0 #6
                 $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
+                $ cash += (betPairs[2]*6)
                 $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
+                $ cash += (betPairs[4]*6)
                 $ betPairs[5] = 0 #6
                 $ betPairs[6] = 0 #6
                 $ betPairs[7] = 0 #6
@@ -7544,19 +7544,19 @@ label cashBets:
                 $ betPairs[10] = 0 #6
                 $ betPairs[11] = 0 #6
                 $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
+                $ cash += (betPairs[13]*6)
                 $ betPairs[14] = 0 #6
-                $ betDice[0] = 0 #1,2,12
+                $ cash += betDice[0] #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
-                $ betDice[3] = 0 #1,2,12
+                $ cash += betDice[3] #1,2,12
                 $ betDice[4] = 0 #1,2,12
-                $ betDice[5] = 0 #1,2,12
+                $ cash += betDice[5] #1,2,12
             elif Dicez == 'Two ⚁':
-                # 2,4,6
+                # 2,4,6_
                 ""
                 $ betSmall = 0 # Chips on Small
-                $ betBig = 0 # Chips on Big
+                $ cash += betBig # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
                 $ betTrips[2] = 0 #180
@@ -7578,33 +7578,33 @@ label cashBets:
                 $ betNums[5] = 0 #7
                 $ betNums[6] = 0 #6
                 $ betNums[7] = 0 #6
-                $ betNums[8] = 0 #7
+                $ cash += (betNums[8]*7)
                 $ betNums[9] = 0 #8
                 $ betNums[10] = 0 #12
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ cash += (betPairs[6]*6) #6 24
+                $ betPairs[7] = 0 #6 25
+                $ cash += (betPairs[8]*6) #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ cash += (betPairs[13]*6) #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
-                $ betDice[1] = 0 #1,2,12
+                $ cash += betDice[1] #1,2,12
                 $ betDice[2] = 0 #1,2,12
-                $ betDice[3] = 0 #1,2,12
+                $ cash += betDice[3] #1,2,12
                 $ betDice[4] = 0 #1,2,12
-                $ betDice[5] = 0 #1,2,12
+                $ cash += betDice[5] #1,2,12
             elif Dicez == 'Three ⚂': 
                 # 3,4,6
                 ""
@@ -7637,21 +7637,21 @@ label cashBets:
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ betPairs[7] = 0 #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
@@ -7690,21 +7690,21 @@ label cashBets:
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ betPairs[7] = 0 #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
@@ -7743,21 +7743,21 @@ label cashBets:
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ betPairs[7] = 0 #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
@@ -7796,21 +7796,21 @@ label cashBets:
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ betPairs[7] = 0 #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
@@ -7822,7 +7822,7 @@ label cashBets:
         if Dicey == 'One ⚀':
             ""
             if Dicez == 'One ⚀':
-                # 1,1,5
+                # 1,1,5__
                 ""
                 $ cash += betSmall
                 $ betBig = 0 # Chips on Big
@@ -7868,11 +7868,11 @@ label cashBets:
                 $ betPairs[12] = 0 #6
                 $ betPairs[13] = 0 #6
                 $ betPairs[14] = 0 #6
-                $ betDice[0] = 0 #1,2,12
+                $ cash += (betDice[0]*2) #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
                 $ betDice[3] = 0 #1,2,12
-                $ betDice[4] = 0 #1,2,12
+                $ cash += betDice[4] #1,2,12
                 $ betDice[5] = 0 #1,2,12
             elif Dicez == 'Two ⚁':
                 # 1,2,5_
@@ -7981,9 +7981,9 @@ label cashBets:
                 $ cash += betDice[4]
                 $ betDice[5] = 0 #1,2,12
             elif Dicez == 'Four ⚃':
-                # 1,4,5
+                # 1,4,5__
                 ""
-                $ betSmall = 0 # Chips on Small
+                $ cash += betSmall # Chips on Small
                 $ betBig = 0 # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
@@ -8004,7 +8004,7 @@ label cashBets:
                 $ betNums[3] = 0 #12
                 $ betNums[4] = 0 #8
                 $ betNums[5] = 0 #7
-                $ betNums[6] = 0 #6
+                $ cash += (betNums[6]*6)
                 $ betNums[7] = 0 #6
                 $ betNums[8] = 0 #7
                 $ betNums[9] = 0 #8
@@ -8014,8 +8014,8 @@ label cashBets:
                 $ betNums[13] = 0 #62
                 $ betPairs[0] = 0 #6
                 $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
+                $ cash += (betPairs[2]*6)
+                $ cash += (betPairs[3]*6)
                 $ betPairs[4] = 0 #6
                 $ betPairs[5] = 0 #6
                 $ betPairs[6] = 0 #6
@@ -8024,20 +8024,20 @@ label cashBets:
                 $ betPairs[9] = 0 #6
                 $ betPairs[10] = 0 #6
                 $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
+                $ cash += (betPairs[12]*6)
                 $ betPairs[13] = 0 #6
                 $ betPairs[14] = 0 #6
-                $ betDice[0] = 0 #1,2,12
+                $ cash += betDice[0]
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
-                $ betDice[3] = 0 #1,2,12
-                $ betDice[4] = 0 #1,2,12
+                $ cash += betDice[3]
+                $ cash += betDice[4]
                 $ betDice[5] = 0 #1,2,12
             elif Dicez == 'Five ⚄':
-                # 1,5,5
+                # 1,5,5_
                 ""
                 $ betSmall = 0 # Chips on Small
-                $ betBig = 0 # Chips on Big
+                $ cash += betBig # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
                 $ betTrips[2] = 0 #180
@@ -8049,7 +8049,7 @@ label cashBets:
                 $ betDoubs[1] = 0 #11
                 $ betDoubs[2] = 0 #!1
                 $ betDoubs[3] = 0 #11
-                $ betDoubs[4] = 0 #11
+                $ cash += (betDoubs[4]*11)
                 $ betDoubs[5] = 0 #11
                 $ betNums[0] = 0 #62
                 $ betNums[1] = 0 #31
@@ -8058,7 +8058,7 @@ label cashBets:
                 $ betNums[4] = 0 #8
                 $ betNums[5] = 0 #7
                 $ betNums[6] = 0 #6
-                $ betNums[7] = 0 #6
+                $ cash += (betNums[7]*6)
                 $ betNums[8] = 0 #7
                 $ betNums[9] = 0 #8
                 $ betNums[10] = 0 #12
@@ -8068,7 +8068,7 @@ label cashBets:
                 $ betPairs[0] = 0 #6
                 $ betPairs[1] = 0 #6
                 $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
+                $ cash += (betPairs[3]*6)
                 $ betPairs[4] = 0 #6
                 $ betPairs[5] = 0 #6
                 $ betPairs[6] = 0 #6
@@ -8080,17 +8080,17 @@ label cashBets:
                 $ betPairs[12] = 0 #6
                 $ betPairs[13] = 0 #6
                 $ betPairs[14] = 0 #6
-                $ betDice[0] = 0 #1,2,12
+                $ cash += betDice[0] #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
                 $ betDice[3] = 0 #1,2,12
-                $ betDice[4] = 0 #1,2,12
+                $ cash += (betDice[4]*2) #1,2,12
                 $ betDice[5] = 0 #1,2,12
             else: #'Six ⚅'
-                # 1,5,6
+                # 1,5,6__
                 ""
                 $ betSmall = 0 # Chips on Small
-                $ betBig = 0 # Chips on Big
+                $ cash += betBig # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
                 $ betTrips[2] = 0 #180
@@ -8112,7 +8112,7 @@ label cashBets:
                 $ betNums[5] = 0 #7
                 $ betNums[6] = 0 #6
                 $ betNums[7] = 0 #6
-                $ betNums[8] = 0 #7
+                $ cash += (betNums[8]*7)
                 $ betNums[9] = 0 #8
                 $ betNums[10] = 0 #12
                 $ betNums[11] = 0 #18
@@ -8121,8 +8121,8 @@ label cashBets:
                 $ betPairs[0] = 0 #6
                 $ betPairs[1] = 0 #6
                 $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
+                $ cash += (betPairs[3]*6)
+                $ cash += (betPairs[4]*6)
                 $ betPairs[5] = 0 #6
                 $ betPairs[6] = 0 #6
                 $ betPairs[7] = 0 #6
@@ -8132,13 +8132,13 @@ label cashBets:
                 $ betPairs[11] = 0 #6
                 $ betPairs[12] = 0 #6
                 $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
-                $ betDice[0] = 0 #1,2,12
+                $ cash += (betPairs[14]*6)
+                $ cash += betDice[0]
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
                 $ betDice[3] = 0 #1,2,12
-                $ betDice[4] = 0 #1,2,12
-                $ betDice[5] = 0 #1,2,12
+                $ cash += betDice[4]
+                $ cash += betDice[5]
         elif Dicey == 'Two ⚁':
             ""
             if Dicez == 'One ⚀':
@@ -8195,9 +8195,9 @@ label cashBets:
                 $ cash += betDice[4]
                 $ betDice[5] = 0 #1,2,12
             elif Dicez == 'Two ⚁':
-                # 2,2,5
+                # 2,2,5_
                 ""
-                $ betSmall = 0 # Chips on Small
+                $ cash += betSmall # Chips on Small
                 $ betBig = 0 # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
@@ -8207,7 +8207,7 @@ label cashBets:
                 $ betTrips[5] = 0 #180
                 $ betTrips[6] = 0 #180
                 $ betDoubs[0] = 0 #11
-                $ betDoubs[1] = 0 #11
+                $ cash += (betDoubs[1]*11)
                 $ betDoubs[2] = 0 #!1
                 $ betDoubs[3] = 0 #11
                 $ betDoubs[4] = 0 #11
@@ -8217,7 +8217,7 @@ label cashBets:
                 $ betNums[2] = 0 #18
                 $ betNums[3] = 0 #12
                 $ betNums[4] = 0 #8
-                $ betNums[5] = 0 #7
+                $ cash += (betNums[5]*7)
                 $ betNums[6] = 0 #6
                 $ betNums[7] = 0 #6
                 $ betNums[8] = 0 #7
@@ -8233,7 +8233,7 @@ label cashBets:
                 $ betPairs[4] = 0 #6
                 $ betPairs[5] = 0 #6
                 $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
+                $ cash += (betPairs[7]*6)
                 $ betPairs[8] = 0 #6
                 $ betPairs[9] = 0 #6
                 $ betPairs[10] = 0 #6
@@ -8242,15 +8242,15 @@ label cashBets:
                 $ betPairs[13] = 0 #6
                 $ betPairs[14] = 0 #6
                 $ betDice[0] = 0 #1,2,12
-                $ betDice[1] = 0 #1,2,12
+                $ cash += (betDice[1]*2) #1,2,12
                 $ betDice[2] = 0 #1,2,12
                 $ betDice[3] = 0 #1,2,12
-                $ betDice[4] = 0 #1,2,12
+                $ cash += betDice[4] #1,2,12
                 $ betDice[5] = 0 #1,2,12
             elif Dicez == 'Three ⚂': 
-                # 2,3,5
+                # 2,3,5_
                 ""
-                $ betSmall = 0 # Chips on Small
+                $ cash += betSmall # Chips on Small
                 $ betBig = 0 # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
@@ -8271,7 +8271,7 @@ label cashBets:
                 $ betNums[3] = 0 #12
                 $ betNums[4] = 0 #8
                 $ betNums[5] = 0 #7
-                $ betNums[6] = 0 #6
+                $ cash += (betNums[6]*6)
                 $ betNums[7] = 0 #6
                 $ betNums[8] = 0 #7
                 $ betNums[9] = 0 #8
@@ -8284,27 +8284,27 @@ label cashBets:
                 $ betPairs[2] = 0 #6
                 $ betPairs[3] = 0 #6
                 $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
+                $ cash += (betPairs[5]*6
                 $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
+                $ cash += (betPairs[7]*6
                 $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
+                $ cash += (betPairs[9]*6)
                 $ betPairs[10] = 0 #6
                 $ betPairs[11] = 0 #6
                 $ betPairs[12] = 0 #6
                 $ betPairs[13] = 0 #6
                 $ betPairs[14] = 0 #6
                 $ betDice[0] = 0 #1,2,12
-                $ betDice[1] = 0 #1,2,12
-                $ betDice[2] = 0 #1,2,12
+                $ cash += betDice[1] #1,2,12
+                $ cash += betDice[2] #1,2,12
                 $ betDice[3] = 0 #1,2,12
-                $ betDice[4] = 0 #1,2,12
+                $ cash += betDice[4] #1,2,12
                 $ betDice[5] = 0 #1,2,12
             elif Dicez == 'Four ⚃':
-                # 2,4,5
+                # 2,4,5__
                 ""
                 $ betSmall = 0 # Chips on Small
-                $ betBig = 0 # Chips on Big
+                $ cash += betBig # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
                 $ betTrips[2] = 0 #180
@@ -8325,39 +8325,39 @@ label cashBets:
                 $ betNums[4] = 0 #8
                 $ betNums[5] = 0 #7
                 $ betNums[6] = 0 #6
-                $ betNums[7] = 0 #6
+                $ cash += (betNums[7]*6)
                 $ betNums[8] = 0 #7
                 $ betNums[9] = 0 #8
                 $ betNums[10] = 0 #12
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ cash += (betPairs[6]*6) #6 24
+                $ cash += (betPairs[7]*6) #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ cash += (betPairs[12]*6) #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
-                $ betDice[1] = 0 #1,2,12
+                $ cash += betDice[1] #1,2,12
                 $ betDice[2] = 0 #1,2,12
-                $ betDice[3] = 0 #1,2,12
-                $ betDice[4] = 0 #1,2,12
+                $ cash += betDice[3] #1,2,12
+                $ cash += betDice[4] #1,2,12
                 $ betDice[5] = 0 #1,2,12
             elif Dicez == 'Five ⚄':
-                # 2,5,5
+                # 2,5,5_
                 ""
                 $ betSmall = 0 # Chips on Small
-                $ betBig = 0 # Chips on Big
+                $ cash += betBig # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
                 $ betTrips[2] = 0 #180
@@ -8369,7 +8369,7 @@ label cashBets:
                 $ betDoubs[1] = 0 #11
                 $ betDoubs[2] = 0 #!1
                 $ betDoubs[3] = 0 #11
-                $ betDoubs[4] = 0 #11
+                $ cash += (betDoubs[4]*11) #11
                 $ betDoubs[5] = 0 #11
                 $ betNums[0] = 0 #62
                 $ betNums[1] = 0 #31
@@ -8379,38 +8379,38 @@ label cashBets:
                 $ betNums[5] = 0 #7
                 $ betNums[6] = 0 #6
                 $ betNums[7] = 0 #6
-                $ betNums[8] = 0 #7
+                $ cash += (betNums[8]*7)
                 $ betNums[9] = 0 #8
                 $ betNums[10] = 0 #12
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ cash += (betPairs[7]*6) #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
-                $ betDice[1] = 0 #1,2,12
+                $ cash += betDice[1] #1,2,12
                 $ betDice[2] = 0 #1,2,12
                 $ betDice[3] = 0 #1,2,12
-                $ betDice[4] = 0 #1,2,12
+                $ cash += (betDice[4]*2) #1,2,12
                 $ betDice[5] = 0 #1,2,12
             else: #'Six ⚅'
-                # 2,5,6
+                # 2,5,6__
                 ""
                 $ betSmall = 0 # Chips on Small
-                $ betBig = 0 # Chips on Big
+                $ cash += betBig # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
                 $ betTrips[2] = 0 #180
@@ -8433,32 +8433,32 @@ label cashBets:
                 $ betNums[6] = 0 #6
                 $ betNums[7] = 0 #6
                 $ betNums[8] = 0 #7
-                $ betNums[9] = 0 #8
+                $ cash += (betNums[9]*8)
                 $ betNums[10] = 0 #12
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ cash += (betPairs[7]*6) #6 25
+                $ cash += (betPairs[8]*6) #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ cash += (betPairs[14]*6) #6 56
                 $ betDice[0] = 0 #1,2,12
-                $ betDice[1] = 0 #1,2,12
+                $ cash += betDice[1] #1,2,12
                 $ betDice[2] = 0 #1,2,12
                 $ betDice[3] = 0 #1,2,12
-                $ betDice[4] = 0 #1,2,12
-                $ betDice[5] = 0 #1,2,12
+                $ cash += betDice[4] #1,2,12
+                $ cash += betDice[5] #1,2,12
         elif Dicey == 'Three ⚂': 
             ""
             if Dicez == 'One ⚀':
@@ -8515,9 +8515,9 @@ label cashBets:
                 $ cash += betDice[4]
                 $ betDice[5] = 0 #1,2,12
             elif Dicez == 'Two ⚁':
-                # 2,3,5
+                # 2,3,5_
                 ""
-                $ betSmall = 0 # Chips on Small
+                $ cash += betSmall # Chips on Small
                 $ betBig = 0 # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
@@ -8538,7 +8538,7 @@ label cashBets:
                 $ betNums[3] = 0 #12
                 $ betNums[4] = 0 #8
                 $ betNums[5] = 0 #7
-                $ betNums[6] = 0 #6
+                $ cash += (betNums[6]*6)
                 $ betNums[7] = 0 #6
                 $ betNums[8] = 0 #7
                 $ betNums[9] = 0 #8
@@ -8551,21 +8551,21 @@ label cashBets:
                 $ betPairs[2] = 0 #6
                 $ betPairs[3] = 0 #6
                 $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
+                $ cash += (betPairs[5]*6
                 $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
+                $ cash += (betPairs[7]*6
                 $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
+                $ cash += (betPairs[9]*6)
                 $ betPairs[10] = 0 #6
                 $ betPairs[11] = 0 #6
                 $ betPairs[12] = 0 #6
                 $ betPairs[13] = 0 #6
                 $ betPairs[14] = 0 #6
                 $ betDice[0] = 0 #1,2,12
-                $ betDice[1] = 0 #1,2,12
-                $ betDice[2] = 0 #1,2,12
+                $ cash += betDice[1] #1,2,12
+                $ cash += betDice[2] #1,2,12
                 $ betDice[3] = 0 #1,2,12
-                $ betDice[4] = 0 #1,2,12
+                $ cash += betDice[4] #1,2,12
                 $ betDice[5] = 0 #1,2,12
             elif Dicez == 'Three ⚂': 
                 # 3,3,5
@@ -8599,21 +8599,21 @@ label cashBets:
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ betPairs[7] = 0 #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
@@ -8652,21 +8652,21 @@ label cashBets:
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ betPairs[7] = 0 #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
@@ -8705,21 +8705,21 @@ label cashBets:
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ betPairs[7] = 0 #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
@@ -8758,21 +8758,21 @@ label cashBets:
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ betPairs[7] = 0 #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
@@ -8782,9 +8782,9 @@ label cashBets:
         elif Dicey == 'Four ⚃':
             ""
             if Dicez == 'One ⚀':
-                # 1,4,5
+                # 1,4,5__
                 ""
-                $ betSmall = 0 # Chips on Small
+                $ cash += betSmall # Chips on Small
                 $ betBig = 0 # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
@@ -8805,7 +8805,7 @@ label cashBets:
                 $ betNums[3] = 0 #12
                 $ betNums[4] = 0 #8
                 $ betNums[5] = 0 #7
-                $ betNums[6] = 0 #6
+                $ cash += (betNums[6]*6)
                 $ betNums[7] = 0 #6
                 $ betNums[8] = 0 #7
                 $ betNums[9] = 0 #8
@@ -8815,8 +8815,8 @@ label cashBets:
                 $ betNums[13] = 0 #62
                 $ betPairs[0] = 0 #6
                 $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
+                $ cash += (betPairs[2]*6)
+                $ cash += (betPairs[3]*6)
                 $ betPairs[4] = 0 #6
                 $ betPairs[5] = 0 #6
                 $ betPairs[6] = 0 #6
@@ -8825,20 +8825,20 @@ label cashBets:
                 $ betPairs[9] = 0 #6
                 $ betPairs[10] = 0 #6
                 $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
+                $ cash += (betPairs[12]*6)
                 $ betPairs[13] = 0 #6
                 $ betPairs[14] = 0 #6
-                $ betDice[0] = 0 #1,2,12
+                $ cash += betDice[0]
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
-                $ betDice[3] = 0 #1,2,12
-                $ betDice[4] = 0 #1,2,12
+                $ cash += betDice[3]
+                $ cash += betDice[4]
                 $ betDice[5] = 0 #1,2,12
             elif Dicez == 'Two ⚁':
-                # 2,4,5
+                # 2,4,5__
                 ""
                 $ betSmall = 0 # Chips on Small
-                $ betBig = 0 # Chips on Big
+                $ cash += betBig # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
                 $ betTrips[2] = 0 #180
@@ -8859,33 +8859,33 @@ label cashBets:
                 $ betNums[4] = 0 #8
                 $ betNums[5] = 0 #7
                 $ betNums[6] = 0 #6
-                $ betNums[7] = 0 #6
+                $ cash += (betNums[7]*6)
                 $ betNums[8] = 0 #7
                 $ betNums[9] = 0 #8
                 $ betNums[10] = 0 #12
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ cash += (betPairs[6]*6) #6 24
+                $ cash += (betPairs[7]*6) #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ cash += (betPairs[12]*6) #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
-                $ betDice[1] = 0 #1,2,12
+                $ cash += betDice[1] #1,2,12
                 $ betDice[2] = 0 #1,2,12
-                $ betDice[3] = 0 #1,2,12
-                $ betDice[4] = 0 #1,2,12
+                $ cash += betDice[3] #1,2,12
+                $ cash += betDice[4] #1,2,12
                 $ betDice[5] = 0 #1,2,12
             elif Dicez == 'Three ⚂': 
                 # 3,4,5
@@ -8919,21 +8919,21 @@ label cashBets:
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ betPairs[7] = 0 #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
@@ -8972,21 +8972,21 @@ label cashBets:
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ betPairs[7] = 0 #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
@@ -9025,21 +9025,21 @@ label cashBets:
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ betPairs[7] = 0 #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
@@ -9078,21 +9078,21 @@ label cashBets:
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ betPairs[7] = 0 #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
@@ -9102,10 +9102,10 @@ label cashBets:
         elif Dicey == 'Five ⚄':
             ""
             if Dicez == 'One ⚀':
-                # 1,5,5
+                # 1,5,5_
                 ""
                 $ betSmall = 0 # Chips on Small
-                $ betBig = 0 # Chips on Big
+                $ cash += betBig # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
                 $ betTrips[2] = 0 #180
@@ -9117,7 +9117,7 @@ label cashBets:
                 $ betDoubs[1] = 0 #11
                 $ betDoubs[2] = 0 #!1
                 $ betDoubs[3] = 0 #11
-                $ betDoubs[4] = 0 #11
+                $ cash += (betDoubs[4]*11)
                 $ betDoubs[5] = 0 #11
                 $ betNums[0] = 0 #62
                 $ betNums[1] = 0 #31
@@ -9126,7 +9126,7 @@ label cashBets:
                 $ betNums[4] = 0 #8
                 $ betNums[5] = 0 #7
                 $ betNums[6] = 0 #6
-                $ betNums[7] = 0 #6
+                $ cash += (betNums[7]*6)
                 $ betNums[8] = 0 #7
                 $ betNums[9] = 0 #8
                 $ betNums[10] = 0 #12
@@ -9136,7 +9136,7 @@ label cashBets:
                 $ betPairs[0] = 0 #6
                 $ betPairs[1] = 0 #6
                 $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
+                $ cash += (betPairs[3]*6)
                 $ betPairs[4] = 0 #6
                 $ betPairs[5] = 0 #6
                 $ betPairs[6] = 0 #6
@@ -9148,17 +9148,17 @@ label cashBets:
                 $ betPairs[12] = 0 #6
                 $ betPairs[13] = 0 #6
                 $ betPairs[14] = 0 #6
-                $ betDice[0] = 0 #1,2,12
+                $ cash += betDice[0] #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
                 $ betDice[3] = 0 #1,2,12
-                $ betDice[4] = 0 #1,2,12
+                $ cash += (betDice[4]*2) #1,2,12
                 $ betDice[5] = 0 #1,2,12
             elif Dicez == 'Two ⚁':
-                # 2,5,5
+                # 2,5,5_
                 ""
                 $ betSmall = 0 # Chips on Small
-                $ betBig = 0 # Chips on Big
+                $ cash += betBig # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
                 $ betTrips[2] = 0 #180
@@ -9170,7 +9170,7 @@ label cashBets:
                 $ betDoubs[1] = 0 #11
                 $ betDoubs[2] = 0 #!1
                 $ betDoubs[3] = 0 #11
-                $ betDoubs[4] = 0 #11
+                $ cash += (betDoubs[4]*11) #11
                 $ betDoubs[5] = 0 #11
                 $ betNums[0] = 0 #62
                 $ betNums[1] = 0 #31
@@ -9180,32 +9180,32 @@ label cashBets:
                 $ betNums[5] = 0 #7
                 $ betNums[6] = 0 #6
                 $ betNums[7] = 0 #6
-                $ betNums[8] = 0 #7
+                $ cash += (betNums[8]*7)
                 $ betNums[9] = 0 #8
                 $ betNums[10] = 0 #12
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ cash += (betPairs[7]*6) #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
-                $ betDice[1] = 0 #1,2,12
+                $ cash += betDice[1] #1,2,12
                 $ betDice[2] = 0 #1,2,12
                 $ betDice[3] = 0 #1,2,12
-                $ betDice[4] = 0 #1,2,12
+                $ cash += (betDice[4]*2) #1,2,12
                 $ betDice[5] = 0 #1,2,12
             elif Dicez == 'Three ⚂': 
                 # 3,5,5
@@ -9239,21 +9239,21 @@ label cashBets:
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ betPairs[7] = 0 #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
@@ -9292,21 +9292,21 @@ label cashBets:
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ betPairs[7] = 0 #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
@@ -9345,21 +9345,21 @@ label cashBets:
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ betPairs[7] = 0 #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
@@ -9398,21 +9398,21 @@ label cashBets:
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ betPairs[7] = 0 #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
@@ -9422,10 +9422,10 @@ label cashBets:
         else: #'Six ⚅'
             ""
             if Dicez == 'One ⚀':
-                # 1,5,6
+                # 1,5,6__
                 ""
                 $ betSmall = 0 # Chips on Small
-                $ betBig = 0 # Chips on Big
+                $ cash += betBig # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
                 $ betTrips[2] = 0 #180
@@ -9447,7 +9447,7 @@ label cashBets:
                 $ betNums[5] = 0 #7
                 $ betNums[6] = 0 #6
                 $ betNums[7] = 0 #6
-                $ betNums[8] = 0 #7
+                $ cash += (betNums[8]*7)
                 $ betNums[9] = 0 #8
                 $ betNums[10] = 0 #12
                 $ betNums[11] = 0 #18
@@ -9456,8 +9456,8 @@ label cashBets:
                 $ betPairs[0] = 0 #6
                 $ betPairs[1] = 0 #6
                 $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
+                $ cash += (betPairs[3]*6)
+                $ cash += (betPairs[4]*6)
                 $ betPairs[5] = 0 #6
                 $ betPairs[6] = 0 #6
                 $ betPairs[7] = 0 #6
@@ -9467,18 +9467,18 @@ label cashBets:
                 $ betPairs[11] = 0 #6
                 $ betPairs[12] = 0 #6
                 $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
-                $ betDice[0] = 0 #1,2,12
+                $ cash += (betPairs[14]*6)
+                $ cash += betDice[0]
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
                 $ betDice[3] = 0 #1,2,12
-                $ betDice[4] = 0 #1,2,12
-                $ betDice[5] = 0 #1,2,12
+                $ cash += betDice[4]
+                $ cash += betDice[5]
             elif Dicez == 'Two ⚁':
-                # 2,5,6
+                # 2,5,6__
                 ""
                 $ betSmall = 0 # Chips on Small
-                $ betBig = 0 # Chips on Big
+                $ cash += betBig # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
                 $ betTrips[2] = 0 #180
@@ -9501,32 +9501,32 @@ label cashBets:
                 $ betNums[6] = 0 #6
                 $ betNums[7] = 0 #6
                 $ betNums[8] = 0 #7
-                $ betNums[9] = 0 #8
+                $ cash += (betNums[9]*8)
                 $ betNums[10] = 0 #12
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ cash += (betPairs[7]*6) #6 25
+                $ cash += (betPairs[8]*6) #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ cash += (betPairs[14]*6) #6 56
                 $ betDice[0] = 0 #1,2,12
-                $ betDice[1] = 0 #1,2,12
+                $ cash += betDice[1] #1,2,12
                 $ betDice[2] = 0 #1,2,12
                 $ betDice[3] = 0 #1,2,12
-                $ betDice[4] = 0 #1,2,12
-                $ betDice[5] = 0 #1,2,12
+                $ cash += betDice[4] #1,2,12
+                $ cash += betDice[5] #1,2,12
             elif Dicez == 'Three ⚂': 
                 # 3,5,6
                 ""
@@ -9559,21 +9559,21 @@ label cashBets:
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ betPairs[7] = 0 #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
@@ -9612,21 +9612,21 @@ label cashBets:
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ betPairs[7] = 0 #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
@@ -9665,21 +9665,21 @@ label cashBets:
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ betPairs[7] = 0 #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
@@ -9718,21 +9718,21 @@ label cashBets:
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ betPairs[7] = 0 #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
@@ -9744,7 +9744,7 @@ label cashBets:
         if Dicey == 'One ⚀':
             ""
             if Dicez == 'One ⚀':
-                # 1,1,6
+                # 1,1,6__
                 ""
                 $ cash += betSmall
                 $ betBig = 0 # Chips on Big
@@ -9790,12 +9790,12 @@ label cashBets:
                 $ betPairs[12] = 0 #6
                 $ betPairs[13] = 0 #6
                 $ betPairs[14] = 0 #6
-                $ betDice[0] = 0 #1,2,12
+                $ cash += (betDice[0]*2) #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
                 $ betDice[3] = 0 #1,2,12
                 $ betDice[4] = 0 #1,2,12
-                $ betDice[5] = 0 #1,2,12
+                $ cash += betDice[5] #1,2,12
             elif Dicez == 'Two ⚁':
                 # 1,2,6_
                 ""
@@ -9903,10 +9903,10 @@ label cashBets:
                 $ betDice[4] = 0 #1,2,12
                 $ cash += betDice[5]
             elif Dicez == 'Four ⚃':
-                # 1,4,6
+                # 1,4,6__
                 ""
                 $ betSmall = 0 # Chips on Small
-                $ betBig = 0 # Chips on Big
+                $ cash += betBig # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
                 $ betTrips[2] = 0 #180
@@ -9927,7 +9927,7 @@ label cashBets:
                 $ betNums[4] = 0 #8
                 $ betNums[5] = 0 #7
                 $ betNums[6] = 0 #6
-                $ betNums[7] = 0 #6
+                $ cash += (betNums[7]*6)
                 $ betNums[8] = 0 #7
                 $ betNums[9] = 0 #8
                 $ betNums[10] = 0 #12
@@ -9936,9 +9936,9 @@ label cashBets:
                 $ betNums[13] = 0 #62
                 $ betPairs[0] = 0 #6
                 $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
+                $ cash += (betPairs[2]*6)
                 $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
+                $ cash += (betPairs[4]*6)
                 $ betPairs[5] = 0 #6
                 $ betPairs[6] = 0 #6
                 $ betPairs[7] = 0 #6
@@ -9947,19 +9947,19 @@ label cashBets:
                 $ betPairs[10] = 0 #6
                 $ betPairs[11] = 0 #6
                 $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
+                $ cash += (betPairs[13]*6)
                 $ betPairs[14] = 0 #6
-                $ betDice[0] = 0 #1,2,12
+                $ cash += betDice[0] #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
-                $ betDice[3] = 0 #1,2,12
+                $ cash += betDice[3] #1,2,12
                 $ betDice[4] = 0 #1,2,12
-                $ betDice[5] = 0 #1,2,12
+                $ cash += betDice[5] #1,2,12
             elif Dicez == 'Five ⚄':
-                # 1,5,6
+                # 1,5,6__
                 ""
                 $ betSmall = 0 # Chips on Small
-                $ betBig = 0 # Chips on Big
+                $ cash += betBig # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
                 $ betTrips[2] = 0 #180
@@ -9981,7 +9981,7 @@ label cashBets:
                 $ betNums[5] = 0 #7
                 $ betNums[6] = 0 #6
                 $ betNums[7] = 0 #6
-                $ betNums[8] = 0 #7
+                $ cash += (betNums[8]*7)
                 $ betNums[9] = 0 #8
                 $ betNums[10] = 0 #12
                 $ betNums[11] = 0 #18
@@ -9990,8 +9990,8 @@ label cashBets:
                 $ betPairs[0] = 0 #6
                 $ betPairs[1] = 0 #6
                 $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
+                $ cash += (betPairs[3]*6)
+                $ cash += (betPairs[4]*6)
                 $ betPairs[5] = 0 #6
                 $ betPairs[6] = 0 #6
                 $ betPairs[7] = 0 #6
@@ -10001,18 +10001,18 @@ label cashBets:
                 $ betPairs[11] = 0 #6
                 $ betPairs[12] = 0 #6
                 $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
-                $ betDice[0] = 0 #1,2,12
+                $ cash += (betPairs[14]*6)
+                $ cash += betDice[0]
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
                 $ betDice[3] = 0 #1,2,12
-                $ betDice[4] = 0 #1,2,12
-                $ betDice[5] = 0 #1,2,12
+                $ cash += betDice[4]
+                $ cash += betDice[5]
             else: #'Six ⚅'
-                # 1,6,6
+                # 1,6,6__
                 ""
                 $ betSmall = 0 # Chips on Small
-                $ betBig = 0 # Chips on Big
+                $ cash += betBig # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
                 $ betTrips[2] = 0 #180
@@ -10025,7 +10025,7 @@ label cashBets:
                 $ betDoubs[2] = 0 #!1
                 $ betDoubs[3] = 0 #11
                 $ betDoubs[4] = 0 #11
-                $ betDoubs[5] = 0 #11
+                $ cash += (betDoubs[5]*11)
                 $ betNums[0] = 0 #62
                 $ betNums[1] = 0 #31
                 $ betNums[2] = 0 #18
@@ -10035,7 +10035,7 @@ label cashBets:
                 $ betNums[6] = 0 #6
                 $ betNums[7] = 0 #6
                 $ betNums[8] = 0 #7
-                $ betNums[9] = 0 #8
+                $ cash += (betNums[9]*8)
                 $ betNums[10] = 0 #12
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
@@ -10044,7 +10044,7 @@ label cashBets:
                 $ betPairs[1] = 0 #6
                 $ betPairs[2] = 0 #6
                 $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
+                $ cash += (betPairs[4]*6)
                 $ betPairs[5] = 0 #6
                 $ betPairs[6] = 0 #6
                 $ betPairs[7] = 0 #6
@@ -10055,12 +10055,12 @@ label cashBets:
                 $ betPairs[12] = 0 #6
                 $ betPairs[13] = 0 #6
                 $ betPairs[14] = 0 #6
-                $ betDice[0] = 0 #1,2,12
+                $ cash += betDice[0] #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
                 $ betDice[3] = 0 #1,2,12
                 $ betDice[4] = 0 #1,2,12
-                $ betDice[5] = 0 #1,2,12
+                $ cash += (betDice[5]*2) #1,2,12
         elif Dicey == 'Two ⚁':
             ""
             if Dicez == 'One ⚀':
@@ -10117,9 +10117,9 @@ label cashBets:
                 $ betDice[4] = 0 #1,2,12
                 $ cash += betDice[5]
             elif Dicez == 'Two ⚁':
-                # 2,2,6
+                # 2,2,6_
                 ""
-                $ betSmall = 0 # Chips on Small
+                $ cash += betSmall # Chips on Small
                 $ betBig = 0 # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
@@ -10129,7 +10129,7 @@ label cashBets:
                 $ betTrips[5] = 0 #180
                 $ betTrips[6] = 0 #180
                 $ betDoubs[0] = 0 #11
-                $ betDoubs[1] = 0 #11
+                $ cash += (betDoubs[1]*11)
                 $ betDoubs[2] = 0 #!1
                 $ betDoubs[3] = 0 #11
                 $ betDoubs[4] = 0 #11
@@ -10140,7 +10140,7 @@ label cashBets:
                 $ betNums[3] = 0 #12
                 $ betNums[4] = 0 #8
                 $ betNums[5] = 0 #7
-                $ betNums[6] = 0 #6
+                $ cash += (betNums[6]*6)
                 $ betNums[7] = 0 #6
                 $ betNums[8] = 0 #7
                 $ betNums[9] = 0 #8
@@ -10156,7 +10156,7 @@ label cashBets:
                 $ betPairs[5] = 0 #6
                 $ betPairs[6] = 0 #6
                 $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
+                $ cash += (betPairs[8]*6)
                 $ betPairs[9] = 0 #6
                 $ betPairs[10] = 0 #6
                 $ betPairs[11] = 0 #6
@@ -10164,16 +10164,16 @@ label cashBets:
                 $ betPairs[13] = 0 #6
                 $ betPairs[14] = 0 #6
                 $ betDice[0] = 0 #1,2,12
-                $ betDice[1] = 0 #1,2,12
+                $ cash += betDice[1]*2) #1,2,12
                 $ betDice[2] = 0 #1,2,12
                 $ betDice[3] = 0 #1,2,12
                 $ betDice[4] = 0 #1,2,12
-                $ betDice[5] = 0 #1,2,12
+                $ cash += betDice[5] #1,2,12
             elif Dicez == 'Three ⚂': 
-                # 2,3,6
+                # 2,3,6_
                 ""
                 $ betSmall = 0 # Chips on Small
-                $ betBig = 0 # Chips on Big
+                $ cash += betBig # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
                 $ betTrips[2] = 0 #180
@@ -10194,39 +10194,39 @@ label cashBets:
                 $ betNums[4] = 0 #8
                 $ betNums[5] = 0 #7
                 $ betNums[6] = 0 #6
-                $ betNums[7] = 0 #6
+                $ cash += (betNums[7]*6)
                 $ betNums[8] = 0 #7
                 $ betNums[9] = 0 #8
                 $ betNums[10] = 0 #12
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ cash += (betPairs[5]*2) #6 23
+                $ betPairs[6] = 0 #6 24
+                $ betPairs[7] = 0 #6 25
+                $ cash += (betPairs[8]*2) #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ cash += (betPairs[11]*2) #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
-                $ betDice[1] = 0 #1,2,12
-                $ betDice[2] = 0 #1,2,12
+                $ cash += betDice[1] #1,2,12
+                $ cash += betDice[2] #1,2,12
                 $ betDice[3] = 0 #1,2,12
                 $ betDice[4] = 0 #1,2,12
-                $ betDice[5] = 0 #1,2,12
+                $ cash += betDice[5] #1,2,12
             elif Dicez == 'Four ⚃':
-                # 2,4,6
+                # 2,4,6_
                 ""
                 $ betSmall = 0 # Chips on Small
-                $ betBig = 0 # Chips on Big
+                $ cash += betBig # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
                 $ betTrips[2] = 0 #180
@@ -10248,38 +10248,38 @@ label cashBets:
                 $ betNums[5] = 0 #7
                 $ betNums[6] = 0 #6
                 $ betNums[7] = 0 #6
-                $ betNums[8] = 0 #7
+                $ cash += (betNums[8]*7)
                 $ betNums[9] = 0 #8
                 $ betNums[10] = 0 #12
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ cash += (betPairs[6]*6) #6 24
+                $ betPairs[7] = 0 #6 25
+                $ cash += (betPairs[8]*6) #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ cash += (betPairs[13]*6) #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
-                $ betDice[1] = 0 #1,2,12
+                $ cash += betDice[1] #1,2,12
                 $ betDice[2] = 0 #1,2,12
-                $ betDice[3] = 0 #1,2,12
+                $ cash += betDice[3] #1,2,12
                 $ betDice[4] = 0 #1,2,12
-                $ betDice[5] = 0 #1,2,12
+                $ cash += betDice[5] #1,2,12
             elif Dicez == 'Five ⚄':
-                # 2,5,6
+                # 2,5,6__
                 ""
                 $ betSmall = 0 # Chips on Small
-                $ betBig = 0 # Chips on Big
+                $ cash += betBig # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
                 $ betTrips[2] = 0 #180
@@ -10302,37 +10302,37 @@ label cashBets:
                 $ betNums[6] = 0 #6
                 $ betNums[7] = 0 #6
                 $ betNums[8] = 0 #7
-                $ betNums[9] = 0 #8
+                $ cash += (betNums[9]*8)
                 $ betNums[10] = 0 #12
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ cash += (betPairs[7]*6) #6 25
+                $ cash += (betPairs[8]*6) #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ cash += (betPairs[14]*6) #6 56
                 $ betDice[0] = 0 #1,2,12
-                $ betDice[1] = 0 #1,2,12
+                $ cash += betDice[1] #1,2,12
                 $ betDice[2] = 0 #1,2,12
                 $ betDice[3] = 0 #1,2,12
-                $ betDice[4] = 0 #1,2,12
-                $ betDice[5] = 0 #1,2,12
+                $ cash += betDice[4] #1,2,12
+                $ cash += betDice[5] #1,2,12
             else: #'Six ⚅'
-                # 2,6,6
+                # 2,6,6__
                 ""
                 $ betSmall = 0 # Chips on Small
-                $ betBig = 0 # Chips on Big
+                $ cash += betBig # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
                 $ betTrips[2] = 0 #180
@@ -10345,7 +10345,7 @@ label cashBets:
                 $ betDoubs[2] = 0 #!1
                 $ betDoubs[3] = 0 #11
                 $ betDoubs[4] = 0 #11
-                $ betDoubs[5] = 0 #11
+                $ cash += (betDoubs[5]*11)
                 $ betNums[0] = 0 #62
                 $ betNums[1] = 0 #31
                 $ betNums[2] = 0 #18
@@ -10356,31 +10356,31 @@ label cashBets:
                 $ betNums[7] = 0 #6
                 $ betNums[8] = 0 #7
                 $ betNums[9] = 0 #8
-                $ betNums[10] = 0 #12
+                $ cash += (betNums[10]*12)
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ betPairs[7] = 0 #6 25
+                $ cash += (betPairs[8]*6) #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
-                $ betDice[1] = 0 #1,2,12
+                $ cash += betDice[1] #1,2,12
                 $ betDice[2] = 0 #1,2,12
                 $ betDice[3] = 0 #1,2,12
                 $ betDice[4] = 0 #1,2,12
-                $ betDice[5] = 0 #1,2,12
+                $ cash += (betDice[5]*2) #1,2,12
         elif Dicey == 'Three ⚂': 
             ""
             if Dicez == 'One ⚀':
@@ -10437,10 +10437,10 @@ label cashBets:
                 $ betDice[4] = 0 #1,2,12
                 $ cash += betDice[5]
             elif Dicez == 'Two ⚁':
-                # 2,3,6
+                # 2,3,6_
                 ""
                 $ betSmall = 0 # Chips on Small
-                $ betBig = 0 # Chips on Big
+                $ cash += betBig # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
                 $ betTrips[2] = 0 #180
@@ -10461,34 +10461,34 @@ label cashBets:
                 $ betNums[4] = 0 #8
                 $ betNums[5] = 0 #7
                 $ betNums[6] = 0 #6
-                $ betNums[7] = 0 #6
+                $ cash += (betNums[7]*6)
                 $ betNums[8] = 0 #7
                 $ betNums[9] = 0 #8
                 $ betNums[10] = 0 #12
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ cash += (betPairs[5]*2) #6 23
+                $ betPairs[6] = 0 #6 24
+                $ betPairs[7] = 0 #6 25
+                $ cash += (betPairs[8]*2) #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ cash += (betPairs[11]*2) #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
-                $ betDice[1] = 0 #1,2,12
-                $ betDice[2] = 0 #1,2,12
+                $ cash += betDice[1] #1,2,12
+                $ cash += betDice[2] #1,2,12
                 $ betDice[3] = 0 #1,2,12
                 $ betDice[4] = 0 #1,2,12
-                $ betDice[5] = 0 #1,2,12
+                $ cash += betDice[5] #1,2,12
             elif Dicez == 'Three ⚂': 
                 # 3,3,6
                 ""
@@ -10521,21 +10521,21 @@ label cashBets:
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ betPairs[7] = 0 #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
@@ -10574,21 +10574,21 @@ label cashBets:
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ betPairs[7] = 0 #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
@@ -10627,21 +10627,21 @@ label cashBets:
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ betPairs[7] = 0 #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
@@ -10680,21 +10680,21 @@ label cashBets:
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ betPairs[7] = 0 #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
@@ -10704,10 +10704,10 @@ label cashBets:
         elif Dicey == 'Four ⚃':
             ""
             if Dicez == 'One ⚀':
-                # 1,4,6
+                # 1,4,6__
                 ""
                 $ betSmall = 0 # Chips on Small
-                $ betBig = 0 # Chips on Big
+                $ cash += betBig # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
                 $ betTrips[2] = 0 #180
@@ -10728,7 +10728,7 @@ label cashBets:
                 $ betNums[4] = 0 #8
                 $ betNums[5] = 0 #7
                 $ betNums[6] = 0 #6
-                $ betNums[7] = 0 #6
+                $ cash += (betNums[7]*6)
                 $ betNums[8] = 0 #7
                 $ betNums[9] = 0 #8
                 $ betNums[10] = 0 #12
@@ -10737,9 +10737,9 @@ label cashBets:
                 $ betNums[13] = 0 #62
                 $ betPairs[0] = 0 #6
                 $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
+                $ cash += (betPairs[2]*6)
                 $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
+                $ cash += (betPairs[4]*6)
                 $ betPairs[5] = 0 #6
                 $ betPairs[6] = 0 #6
                 $ betPairs[7] = 0 #6
@@ -10748,19 +10748,19 @@ label cashBets:
                 $ betPairs[10] = 0 #6
                 $ betPairs[11] = 0 #6
                 $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
+                $ cash += (betPairs[13]*6)
                 $ betPairs[14] = 0 #6
-                $ betDice[0] = 0 #1,2,12
+                $ cash += betDice[0] #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
-                $ betDice[3] = 0 #1,2,12
+                $ cash += betDice[3] #1,2,12
                 $ betDice[4] = 0 #1,2,12
-                $ betDice[5] = 0 #1,2,12
+                $ cash += betDice[5] #1,2,12
             elif Dicez == 'Two ⚁':
-                # 2,4,6
+                # 2,4,6_
                 ""
                 $ betSmall = 0 # Chips on Small
-                $ betBig = 0 # Chips on Big
+                $ cash += betBig # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
                 $ betTrips[2] = 0 #180
@@ -10782,33 +10782,33 @@ label cashBets:
                 $ betNums[5] = 0 #7
                 $ betNums[6] = 0 #6
                 $ betNums[7] = 0 #6
-                $ betNums[8] = 0 #7
+                $ cash += (betNums[8]*7)
                 $ betNums[9] = 0 #8
                 $ betNums[10] = 0 #12
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ cash += (betPairs[6]*6) #6 24
+                $ betPairs[7] = 0 #6 25
+                $ cash += (betPairs[8]*6) #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ cash += (betPairs[13]*6) #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
-                $ betDice[1] = 0 #1,2,12
+                $ cash += betDice[1] #1,2,12
                 $ betDice[2] = 0 #1,2,12
-                $ betDice[3] = 0 #1,2,12
+                $ cash += betDice[3] #1,2,12
                 $ betDice[4] = 0 #1,2,12
-                $ betDice[5] = 0 #1,2,12
+                $ cash += betDice[5] #1,2,12
             elif Dicez == 'Three ⚂': 
                 # 3,4,6
                 ""
@@ -10841,21 +10841,21 @@ label cashBets:
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ betPairs[7] = 0 #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
@@ -10894,21 +10894,21 @@ label cashBets:
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ betPairs[7] = 0 #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
@@ -10947,21 +10947,21 @@ label cashBets:
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ betPairs[7] = 0 #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
@@ -11000,21 +11000,21 @@ label cashBets:
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ betPairs[7] = 0 #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
@@ -11024,10 +11024,10 @@ label cashBets:
         elif Dicey == 'Five ⚄':
             ""
             if Dicez == 'One ⚀':
-                # 1,5,6
+                # 1,5,6__
                 ""
                 $ betSmall = 0 # Chips on Small
-                $ betBig = 0 # Chips on Big
+                $ cash += betBig # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
                 $ betTrips[2] = 0 #180
@@ -11049,7 +11049,7 @@ label cashBets:
                 $ betNums[5] = 0 #7
                 $ betNums[6] = 0 #6
                 $ betNums[7] = 0 #6
-                $ betNums[8] = 0 #7
+                $ cash += (betNums[8]*7)
                 $ betNums[9] = 0 #8
                 $ betNums[10] = 0 #12
                 $ betNums[11] = 0 #18
@@ -11058,8 +11058,8 @@ label cashBets:
                 $ betPairs[0] = 0 #6
                 $ betPairs[1] = 0 #6
                 $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
+                $ cash += (betPairs[3]*6)
+                $ cash += (betPairs[4]*6)
                 $ betPairs[5] = 0 #6
                 $ betPairs[6] = 0 #6
                 $ betPairs[7] = 0 #6
@@ -11069,18 +11069,18 @@ label cashBets:
                 $ betPairs[11] = 0 #6
                 $ betPairs[12] = 0 #6
                 $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
-                $ betDice[0] = 0 #1,2,12
+                $ cash += (betPairs[14]*6)
+                $ cash += betDice[0]
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
                 $ betDice[3] = 0 #1,2,12
-                $ betDice[4] = 0 #1,2,12
-                $ betDice[5] = 0 #1,2,12
+                $ cash += betDice[4]
+                $ cash += betDice[5]
             elif Dicez == 'Two ⚁':
-                # 2,5,6
+                # 2,5,6__
                 ""
                 $ betSmall = 0 # Chips on Small
-                $ betBig = 0 # Chips on Big
+                $ cash += betBig # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
                 $ betTrips[2] = 0 #180
@@ -11103,32 +11103,32 @@ label cashBets:
                 $ betNums[6] = 0 #6
                 $ betNums[7] = 0 #6
                 $ betNums[8] = 0 #7
-                $ betNums[9] = 0 #8
+                $ cash += (betNums[9]*8)
                 $ betNums[10] = 0 #12
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ cash += (betPairs[7]*6) #6 25
+                $ cash += (betPairs[8]*6) #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ cash += (betPairs[14]*6) #6 56
                 $ betDice[0] = 0 #1,2,12
-                $ betDice[1] = 0 #1,2,12
+                $ cash += betDice[1] #1,2,12
                 $ betDice[2] = 0 #1,2,12
                 $ betDice[3] = 0 #1,2,12
-                $ betDice[4] = 0 #1,2,12
-                $ betDice[5] = 0 #1,2,12
+                $ cash += betDice[4] #1,2,12
+                $ cash += betDice[5] #1,2,12
             elif Dicez == 'Three ⚂': 
                 # 3,5,6
                 ""
@@ -11161,21 +11161,21 @@ label cashBets:
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ betPairs[7] = 0 #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
@@ -11214,21 +11214,21 @@ label cashBets:
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ betPairs[7] = 0 #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
@@ -11267,21 +11267,21 @@ label cashBets:
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ betPairs[7] = 0 #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
@@ -11320,21 +11320,21 @@ label cashBets:
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ betPairs[7] = 0 #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
@@ -11344,10 +11344,10 @@ label cashBets:
         else: #'Six ⚅'
             ""
             if Dicez == 'One ⚀':
-                # 1,6,6
+                # 1,6,6__
                 ""
                 $ betSmall = 0 # Chips on Small
-                $ betBig = 0 # Chips on Big
+                $ cash += betBig # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
                 $ betTrips[2] = 0 #180
@@ -11360,7 +11360,7 @@ label cashBets:
                 $ betDoubs[2] = 0 #!1
                 $ betDoubs[3] = 0 #11
                 $ betDoubs[4] = 0 #11
-                $ betDoubs[5] = 0 #11
+                $ cash += (betDoubs[5]*11)
                 $ betNums[0] = 0 #62
                 $ betNums[1] = 0 #31
                 $ betNums[2] = 0 #18
@@ -11370,7 +11370,7 @@ label cashBets:
                 $ betNums[6] = 0 #6
                 $ betNums[7] = 0 #6
                 $ betNums[8] = 0 #7
-                $ betNums[9] = 0 #8
+                $ cash += (betNums[9]*8)
                 $ betNums[10] = 0 #12
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
@@ -11379,7 +11379,7 @@ label cashBets:
                 $ betPairs[1] = 0 #6
                 $ betPairs[2] = 0 #6
                 $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
+                $ cash += (betPairs[4]*6)
                 $ betPairs[5] = 0 #6
                 $ betPairs[6] = 0 #6
                 $ betPairs[7] = 0 #6
@@ -11390,17 +11390,17 @@ label cashBets:
                 $ betPairs[12] = 0 #6
                 $ betPairs[13] = 0 #6
                 $ betPairs[14] = 0 #6
-                $ betDice[0] = 0 #1,2,12
+                $ cash += betDice[0] #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
                 $ betDice[3] = 0 #1,2,12
                 $ betDice[4] = 0 #1,2,12
-                $ betDice[5] = 0 #1,2,12
+                $ cash += (betDice[5]*2) #1,2,12
             elif Dicez == 'Two ⚁':
-                # 2,6,6
+                # 2,6,6__
                 ""
                 $ betSmall = 0 # Chips on Small
-                $ betBig = 0 # Chips on Big
+                $ cash += betBig # Chips on Big
                 $ betTrips[0] = 0 #31
                 $ betTrips[1] = 0 #180
                 $ betTrips[2] = 0 #180
@@ -11413,7 +11413,7 @@ label cashBets:
                 $ betDoubs[2] = 0 #!1
                 $ betDoubs[3] = 0 #11
                 $ betDoubs[4] = 0 #11
-                $ betDoubs[5] = 0 #11
+                $ cash += (betDoubs[5]*11)
                 $ betNums[0] = 0 #62
                 $ betNums[1] = 0 #31
                 $ betNums[2] = 0 #18
@@ -11424,31 +11424,31 @@ label cashBets:
                 $ betNums[7] = 0 #6
                 $ betNums[8] = 0 #7
                 $ betNums[9] = 0 #8
-                $ betNums[10] = 0 #12
+                $ cash += (betNums[10]*12)
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ betPairs[7] = 0 #6 25
+                $ cash += (betPairs[8]*6) #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
-                $ betDice[1] = 0 #1,2,12
+                $ cash += betDice[1] #1,2,12
                 $ betDice[2] = 0 #1,2,12
                 $ betDice[3] = 0 #1,2,12
                 $ betDice[4] = 0 #1,2,12
-                $ betDice[5] = 0 #1,2,12
+                $ cash += (betDice[5]*2) #1,2,12
             elif Dicez == 'Three ⚂': 
                 # 3,6,6
                 ""
@@ -11481,21 +11481,21 @@ label cashBets:
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ betPairs[7] = 0 #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
@@ -11534,21 +11534,21 @@ label cashBets:
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ betPairs[7] = 0 #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
@@ -11587,21 +11587,21 @@ label cashBets:
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ betPairs[7] = 0 #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
@@ -11640,21 +11640,21 @@ label cashBets:
                 $ betNums[11] = 0 #18
                 $ betNums[12] = 0 #31
                 $ betNums[13] = 0 #62
-                $ betPairs[0] = 0 #6
-                $ betPairs[1] = 0 #6
-                $ betPairs[2] = 0 #6
-                $ betPairs[3] = 0 #6
-                $ betPairs[4] = 0 #6
-                $ betPairs[5] = 0 #6
-                $ betPairs[6] = 0 #6
-                $ betPairs[7] = 0 #6
-                $ betPairs[8] = 0 #6
-                $ betPairs[9] = 0 #6
-                $ betPairs[10] = 0 #6
-                $ betPairs[11] = 0 #6
-                $ betPairs[12] = 0 #6
-                $ betPairs[13] = 0 #6
-                $ betPairs[14] = 0 #6
+                $ betPairs[0] = 0 #6 12
+                $ betPairs[1] = 0 #6 13
+                $ betPairs[2] = 0 #6 14
+                $ betPairs[3] = 0 #6 15
+                $ betPairs[4] = 0 #6 16
+                $ betPairs[5] = 0 #6 23
+                $ betPairs[6] = 0 #6 24
+                $ betPairs[7] = 0 #6 25
+                $ betPairs[8] = 0 #6 26
+                $ betPairs[9] = 0 #6 34
+                $ betPairs[10] = 0 #6 35
+                $ betPairs[11] = 0 #6 36
+                $ betPairs[12] = 0 #6 45
+                $ betPairs[13] = 0 #6 46
+                $ betPairs[14] = 0 #6 56
                 $ betDice[0] = 0 #1,2,12
                 $ betDice[1] = 0 #1,2,12
                 $ betDice[2] = 0 #1,2,12
