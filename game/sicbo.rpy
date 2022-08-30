@@ -37,6 +37,7 @@ label sicBoStart:
 label placeBets:
     $ repeat = True
     while chips >= 0:
+        window hide
         show text "## SIC BO ##\n[chips] Chips remaining" at top
         python:
             ui.textbutton ("SMALL\n4-10\n(1)", clicked=Call('betSmall'), xalign=0.1, yalign=0.1)
