@@ -21,11 +21,11 @@ label start:
                 scene bg sicboboard
                 call sicBoStart
                 c "Here are [chips] to start playing with.\nGood luck!"
-                jump placeBets
-
-                show bg casino
-                show Croupier at left
-                c "In that game you won [chips] from [gameCount]."
+                jump placeBets 
+                # If JUMP above is changed to call
+                # show bg casino
+                # show Croupier at left
+                # c "In that game you won [chips] from [gameCount]."
 
             "Learn how to play Sic-Bo":
                 # This is the tutorial
