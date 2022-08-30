@@ -25,6 +25,9 @@ label sicBoStart:
 
     $ chips = 5 # number of starting chips
     # when calculating winnings a local variable $ cash is used.
+    $ tutorial = False # set to True if you want to disable the option to play again in calcBets
+    $ gameCount = 0 #counts the number of games seen (times you start calcBets)
+
 
     return
 
@@ -99,7 +102,7 @@ label placeBets:
             # ui.text("(1) on 1 dice, (2) on 2 dice, (12) on 3 dice", xalign=0.4, yalign=0.65)
 
             ui.textbutton('"no more bets"', clicked=Jump('calcBets'), xalign=0.5, yalign=0.8)
-            ui.textbutton('Remove bets', clicked=Jump('clearBets'), xalign=0.5, yalign=0.875)
+            ui.textbutton('Clear Bets', clicked=Jump('clearBets'), xalign=0.5, yalign=0.875)
 
             if chips == 0:
                 repeat = False
@@ -107,7 +110,7 @@ label placeBets:
    
             repeat = ui.interact()
 
-    jump calcBets
+    jump calcBets #ends the game
 
     return
 
@@ -119,7 +122,7 @@ label noChips:
         "Play this game":
             jump calcBets
         "Clear your bets from table":
-            jump clearBets
+            call clearBets
             jump placeBets
 
     return
@@ -130,6 +133,7 @@ label noChips:
 # 4. Tell player their winnings, and add it to their chips
 # (note winning bets remain on the board)
 label calcBets:
+    $ gameCount += 1
     "No more bets"
     $ Dicex = renpy.random.choice(['One ⚀', 'Two ⚁', 'Three ⚂', 'Four ⚃', 'Five ⚄', 'Six ⚅'])
     $ Dicey = renpy.random.choice(['Five ⚄', 'Three ⚂', 'One ⚀', 'Two ⚁', 'Four ⚃', 'Six ⚅'])
@@ -144,14 +148,22 @@ label calcBets:
     call cashBets
     call showBets
     "You have won [cash]"
+    # If this is a tutorial we now return (and can use chips, cash etc.)
+    if tutorial:
+        return
+
     $ chips += cash
     $ cash = 0
+
 
     menu:
         "Continue playing":
             jump placeBets
-        "Leave table":
-            jump clearBets
+        "{b}Clear Bets{/b} and continue playing":
+            call clearBets
+            jump placeBets
+        "Leave table (finish game)":
+            call clearBets
 
     return
 
@@ -2909,7 +2921,7 @@ label cashBets:
                 $ betNums[2] = 0 #18
                 $ betNums[3] = 0 #12
                 $ betNums[4] = 0 #8
-                $ cash (betNums[5]*7)
+                $ cash = (betNums[5]*7)
                 $ betNums[6] = 0 #6
                 $ betNums[7] = 0 #6
                 $ betNums[8] = 0 #7
@@ -3176,7 +3188,7 @@ label cashBets:
                 $ betNums[2] = 0 #18
                 $ betNums[3] = 0 #12
                 $ betNums[4] = 0 #8
-                $ cash (betNums[5]*7)
+                $ cash = (betNums[5]*7)
                 $ betNums[6] = 0 #6
                 $ betNums[7] = 0 #6
                 $ betNums[8] = 0 #7
@@ -4511,7 +4523,7 @@ label cashBets:
                 $ betNums[2] = 0 #18
                 $ betNums[3] = 0 #12
                 $ betNums[4] = 0 #8
-                $ cash (betNums[5]*7)
+                $ cash = (betNums[5]*7)
                 $ betNums[6] = 0 #6
                 $ betNums[7] = 0 #6
                 $ betNums[8] = 0 #7
@@ -5045,7 +5057,7 @@ label cashBets:
                 $ betNums[2] = 0 #18
                 $ betNums[3] = 0 #12
                 $ betNums[4] = 0 #8
-                $ cash (betNums[5]*7)
+                $ cash = (betNums[5]*7)
                 $ betNums[6] = 0 #6
                 $ betNums[7] = 0 #6
                 $ betNums[8] = 0 #7
@@ -6380,7 +6392,7 @@ label cashBets:
                 $ betNums[2] = 0 #18
                 $ betNums[3] = 0 #12
                 $ betNums[4] = 0 #8
-                $ cash (betNums[5]*7)
+                $ cash = (betNums[5]*7)
                 $ betNums[6] = 0 #6
                 $ betNums[7] = 0 #6
                 $ betNums[8] = 0 #7
@@ -6647,7 +6659,7 @@ label cashBets:
                 $ betNums[2] = 0 #18
                 $ betNums[3] = 0 #12
                 $ betNums[4] = 0 #8
-                $ cash (betNums[5]*7)
+                $ cash = (betNums[5]*7)
                 $ betNums[6] = 0 #6
                 $ betNums[7] = 0 #6
                 $ betNums[8] = 0 #7
@@ -11727,7 +11739,8 @@ label clearBets:
     "All betts ([cash]-chips) have been removed from the table."
     $ chips += cash
     $ cash = 0
-    "You now have a total of [chips]-chips."
+    "You now have a total of [chips]-chips from playing [gameCount] games."
+    # the game ends here if you jumped to clearBets
     return
 
 
