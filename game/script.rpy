@@ -112,6 +112,8 @@ label start:
                 show Croupier at left
                 c "Remember: To play Sic-Bo:\n1. Click on the board to place bets.\n2. Click 'no more bets' when you have placed all your bets and are ready to let the dice roll.\n"
                 c "3. Your winning bets remain on the table (if you want to remove them click {b}Clear Bets{/b})."
+            "Run test game":
+                call tests
             "Quit game":
                 $ looper = False
 
