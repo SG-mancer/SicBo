@@ -103,7 +103,7 @@ label placeBets:
             # ui.text("(1) on 1 dice, (2) on 2 dice, (12) on 3 dice", xalign=0.4, yalign=0.65)
 
             ui.textbutton('"no more bets"', clicked=Jump('calcBets'), xalign=0.5, yalign=0.8)
-            ui.textbutton('Clear Bets', clicked=Jump('clearBets'), xalign=0.5, yalign=0.875)
+            ui.textbutton('Clear Bets', clicked=Call('clearBets'), xalign=0.5, yalign=0.875)
 
             if chips == 0:
                 repeat = False
